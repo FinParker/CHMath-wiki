@@ -1,3 +1,147 @@
+# 项目信息
 site_name: CHMath-wiki
+site_description: CHMath-wiki,一个旨在通过提供精准、简洁且抓住问题本质的数学内容，来提升数学理解能力的中文资料库
+site_author: CHMath-wiki Team
+site_url: https://finparker.github.io/CHMath-wiki/
+strict: true
+
+# 项目仓库
+repo_name: CHMath-wiki
+repo_url: https://github.com/FinParker/CHMath-wiki
+
+# 版权信息
+
+# 内容导航
+nav:
+  - 简介:
+    - 开始: index.md
+    - 关于本项目: intro/about.md
+  - 离散数学:
+    - 集合论: discrete_mathematics/set_theory.md
+    - 图论: discrete_mathematics/graph_theory.md
+    - 代数结构: 
+      - 代数系统: discrete_mathematics/algebraic_structure/algebraic_system.md
+      - 半群: discrete_mathematics/algebraic_structure/semigroup.md
+      - 独异点(幺半群): discrete_mathematics/algebraic_structure/monoid.md
+      - 群: discrete_mathematics/algebraic_structure/group.md
+      - 环: discrete_mathematics/algebraic_structure/ring.md
+      - 域: discrete_mathematics/algebraic_structure/field.md
+      - 多项式: discrete_mathematics/algebraic_structure/polynomial.md
+    - 组合数学: discrete_mathematics/combinatorics.md
+    - 数理逻辑: discrete_mathematics/mathematical_logic.md
+    - 自动机理论: discrete_mathematics/automata_theory.md
+
+
+# 主题
 theme:
-  name: 'material'
+  name: material
+  language: zh
+  palette:
+    primary: green
+  features:
+    - navigation.expand # 左侧导航栏自动展开
+    - navigation.top    # 回到页面顶部
+    - search.suggest    # 搜索建议
+    - search.highlight  # 搜索结果高亮显示
+
+plugins:
+  - search:
+      separator: '[\s\u200b\-\.]'
+  - mkdocs-video:
+      is_video: True
+
+extra:
+  disqus: 'CHMath-wiki'
+  pagetime: 'on'
+
+
+extra_javascript:
+  - 'assets/js/math-config.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+
+# Markdowm 扩展支持, mkdocs使用Python Markdown库将Markdown文件翻译为HTML
+# 参考 https://hellowac.github.io/mkdocs-docs-zh/user-guide/configuration/#markdown_extensions
+markdown_extensions:
+  # 支持提示框（admonition），用于添加注意、警告等信息框
+  - admonition
+  
+  # 支持定义列表（definition list）
+  - def_list
+  
+  # 支持脚注（footnotes）
+  - footnotes
+  
+  # 提供文档元数据支持（meta data）
+  - meta
+  
+  # 自动生成目录（table of contents），并设置永久链接为空字符串以禁用默认的图标
+  - toc:
+      permalink: ""
+  
+  # 支持数学公式，使用generic模式来兼容MathJax
+  - pymdownx.arithmatex:
+      generic: true
+  
+  # 支持插入上标（caret）文本
+  - pymdownx.caret
+  
+  # 支持编辑标记（如删除线、插入等）
+  - pymdownx.critic
+  
+  # 支持详情/摘要（details）块
+  - pymdownx.details
+  
+  # 支持emoji表情，并使用SVG格式生成
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  
+  # 代码高亮显示，并启用行号显示
+  - pymdownx.highlight:
+      linenums: true
+  
+  # 支持内联代码高亮
+  - pymdownx.inlinehilite
+  
+  # 支持键位符号（例如：Ctrl + S）
+  - pymdownx.keys
+  
+  # 自动识别URL并转换为可点击链接
+  - pymdownx.magiclink
+  
+  # 支持下划线标记
+  - pymdownx.mark
+  
+  # 支持片段插入（snippets），并且检查路径有效性
+  - pymdownx.snippets:
+      check_paths: true
+  
+  # 支持进度条显示
+  - pymdownx.progressbar
+  
+  # 自动转换特定字符为符号（例如：版权符号）
+  - pymdownx.smartsymbols
+  
+  # 增强围栏代码块功能，并支持自定义围栏（如数学公式）
+  - pymdownx.superfences:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
+  
+  # 支持任务列表，并允许自定义复选框样式
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  
+  # 支持删除线（通过波浪号`~`）
+  - pymdownx.tilde
+  
+  # 支持选项卡式内容展示，并启用备用样式
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  # 标准Markdown表格支持
+  - markdown.extensions.tables
+
+  # 强化强调语法的支持
+  - pymdownx.betterem
