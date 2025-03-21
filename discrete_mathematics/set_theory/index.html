@@ -12,22 +12,28 @@
         <meta name="author" content="CHMath-wiki Team">
       
       
+        <link rel="canonical" href="https://finparker.github.io/CHMath-wiki/discrete_mathematics/set_theory/">
       
       
+        <link rel="prev" href="../../intro/about/">
       
-      <link rel="icon" href="/CHMath-wiki/assets/images/favicon.png">
+      
+        <link rel="next" href="../graph_theory/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
     
     
       
-        <title>CHMath-wiki</title>
+        <title>集合论 - CHMath-wiki</title>
       
     
     
-      <link rel="stylesheet" href="/CHMath-wiki/assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="/CHMath-wiki/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("/CHMath-wiki/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/CHMath-wiki/." title="CHMath-wiki" class="md-header__button md-logo" aria-label="CHMath-wiki" data-md-component="logo">
+    <a href="../.." title="CHMath-wiki" class="md-header__button md-logo" aria-label="CHMath-wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -101,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              集合论
             
           </span>
         </div>
@@ -190,7 +201,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/CHMath-wiki/." title="CHMath-wiki" class="md-nav__button md-logo" aria-label="CHMath-wiki" data-md-component="logo">
+    <a href="../.." title="CHMath-wiki" class="md-nav__button md-logo" aria-label="CHMath-wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -257,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -278,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/intro/about/" class="md-nav__link">
+      <a href="../../intro/about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -303,19 +314,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -329,7 +340,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             离散数学
@@ -340,10 +351,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/set_theory/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -352,6 +372,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -364,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/graph_theory/" class="md-nav__link">
+      <a href="../graph_theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/algebraic_structure/algebraic_system/" class="md-nav__link">
+      <a href="../algebraic_structure/algebraic_system/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -443,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/algebraic_structure/semigroup/" class="md-nav__link">
+      <a href="../algebraic_structure/semigroup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/algebraic_structure/monoid/" class="md-nav__link">
+      <a href="../algebraic_structure/monoid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/algebraic_structure/group/" class="md-nav__link">
+      <a href="../algebraic_structure/group/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -506,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/algebraic_structure/ring/" class="md-nav__link">
+      <a href="../algebraic_structure/ring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -527,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/algebraic_structure/field/" class="md-nav__link">
+      <a href="../algebraic_structure/field/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/algebraic_structure/polynomial/" class="md-nav__link">
+      <a href="../algebraic_structure/polynomial/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/combinatorics/" class="md-nav__link">
+      <a href="../combinatorics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -598,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/mathematical_logic/" class="md-nav__link">
+      <a href="../mathematical_logic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -619,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CHMath-wiki/discrete_mathematics/automata_theory/" class="md-nav__link">
+      <a href="../automata_theory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -657,6 +678,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -668,8 +691,26 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+  
+
+
+<h1 id="_1">集合论<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -709,12 +750,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/CHMath-wiki/", "features": ["navigation.expand", "navigation.top", "search.suggest", "search.highlight"], "search": "/CHMath-wiki/assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.top", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="/CHMath-wiki/assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="/CHMath-wiki/assets/js/math-config.js"></script>
+        <script src="../../assets/js/math-config.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
