@@ -16,7 +16,10 @@ nav:
   - 简介:
     - 开始: index.md
     - 关于本项目: intro/about.md
+  - 符号表: symbols.md
   - 离散数学:
+    - 定义汇总:
+      - 基本定义: discrete_mathematics/concepts/basics.md
     - 集合论: discrete_mathematics/set_theory.md
     - 图论: discrete_mathematics/graph_theory.md
     - 代数结构: 
