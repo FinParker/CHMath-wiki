@@ -50,7 +50,7 @@ theme:
 plugins:
   - search:
       separator: '[\s\u200b\-\.]'
-  - mkdocs-video:
+  - video:
       is_video: True
 
 extra:
