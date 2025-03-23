@@ -700,6 +700,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    组合数学
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -710,6 +722,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      错位排列数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="错位排列数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 错位排列数的定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 错位排列数的递推公式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 错位排列数的显式公式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -787,6 +860,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      错位排列数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="错位排列数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 错位排列数的定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 错位排列数的递推公式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 错位排列数的显式公式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -804,7 +927,34 @@
   
 
 
-<h1 id="_1">组合数学<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<div><h1 id="_1">组合数学<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<h2 id="_2">错位排列数<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
+<p>错位排列数（Derangement），也称为“错排问题”，是指在一个排列中，所有元素都不在它们原始位置上的排列数。错位排列数通常用<span class="arithmatex">\(D_n\)</span>表示，其中<span class="arithmatex">\(n\)</span>是排列的元素个数。</p>
+<hr>
+<h3 id="1"><strong>1. 错位排列数的定义</strong><a class="headerlink" href="#1" title="Permanent link"></a></h3>
+<p>假设有一个集合<span class="arithmatex">\(\{1, 2, \dots, n\}\)</span>，我们需要找到一个排列<span class="arithmatex">\(\sigma\)</span>，使得对于每个元素<span class="arithmatex">\(i\)</span>，都有<span class="arithmatex">\(\sigma(i) \neq i\)</span>。满足这种条件的排列数就是错位排列数<span class="arithmatex">\(D_n\)</span>。</p>
+<hr>
+<h3 id="2"><strong>2. 错位排列数的递推公式</strong><a class="headerlink" href="#2" title="Permanent link"></a></h3>
+<p>错位排列数可以通过以下递推公式计算：
+$$
+D_n = (n - 1) \cdot (D_{n-1} + D_{n-2})
+$$
+其中：
+-<span class="arithmatex">\(D_0 = 1\)</span>（空集的错排数为 1）。
+-<span class="arithmatex">\(D_1 = 0\)</span>（只有一个元素时，无法错排）。
+-<span class="arithmatex">\(D_2 = 1\)</span>
+-<span class="arithmatex">\(D_3 = 2\)</span>
+-<span class="arithmatex">\(D_4 = 9\)</span>
+-<span class="arithmatex">\(D_5 = 44\)</span>
+-<span class="arithmatex">\(D_6 = 265\)</span></p>
+<hr>
+<h3 id="3"><strong>3. 错位排列数的显式公式</strong><a class="headerlink" href="#3" title="Permanent link"></a></h3>
+<p>错位排列数也可以通过显式公式直接计算：
+$$
+D_n = n! \cdot \sum_{k=0}^n \frac{(-1)^k}{k!}
+$$
+这个公式来源于容斥原理，表示从所有排列中减去不符合条件的排列。</p>
+<hr></div>
 
 
 
