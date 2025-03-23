@@ -2,7 +2,7 @@
  * @Author: chinesehamburger 2576226012@qq.com
  * @Date: 2025-03-21 14:26:08
  * @LastEditors: chinesehamburger 2576226012@qq.com
- * @LastEditTime: 2025-03-22 21:08:11
+ * @LastEditTime: 2025-03-23 15:05:03
  * @FilePath: \CHMath-wiki\docs\symbols.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,9 +18,16 @@
 
 ## 常用符号
 
+$$
 \begin{array}{|c|c|c|c|}
 \hline
 \text{类别} & \text{符号} & \text{LaTeX表示} & \text{描述} \\
+\hline
+\text{元素标识} & \bar{a} & \verb+\bar{a}+ & \text{共轭;平均值} \\
+\hline
+\text{} & \overrightarrow{a} & \verb+\overrightarrow{a}+ & \text{向量符号} \\
+\hline
+\text{不等号} & \neq & \verb+\neq+ & \text{不等号} \\
 \hline
 \text{一元运算符号} & \pm & \verb+\pm+ & \text{正负号} \\
 \hline
@@ -43,9 +50,11 @@
 \text{} & \langle \psi | & \verb+\langle \psi |+ & \text{混合括号} \\
 \hline
 \end{array}
+$$
 
 ## 集合论
 
+$$
 \begin{array}{|c|c|c|c|}
 \hline
 \text{类别} & \text{符号} & \text{LaTeX表示} & \text{描述} \\
@@ -91,9 +100,11 @@
 \text{} & \upharpoonright & \verb+\upharpoonright+ & \text{关系的限制} \\
 \hline
 \end{array}
+$$
 
 ## 运算符号
 
+$$
 \begin{array}{|c|c|c|c|}
 \hline
 \text{类别} & \text{符号} & \text{LaTeX表示} & \text{描述} \\
@@ -115,9 +126,11 @@
 \text{} & \cdot & \verb+\cdot+ & \text{点乘} \\
 \hline
 \end{array}
+$$
 
 ## 数理逻辑
 
+$$
 \begin{array}{|c|c|c|c|}
 \hline
 \text{类别} & \text{符号} & \text{LaTeX表示} & \text{描述} \\
@@ -126,7 +139,14 @@
 \hline
 \text{} & \forall & \verb+\forall+ & \text{任意} \\
 \hline
+\text{} & \rightarrow & \verb+\rightarrow+ & \text{充分性} \\
+\hline
+\text{} & \leftarrow & \verb+\leftarrow+ & \text{必要性} \\
+\hline
+\text{} & \leftrightarrow & \verb+\leftrightarrow+ & \text{等价于} \\
+\hline
 \end{array}
+$$
 
 ## 积分符号
 
