@@ -2,7 +2,7 @@
  * @Author: chinesehamburger 2576226012@qq.com
  * @Date: 2025-03-21 14:26:08
  * @LastEditors: chinesehamburger 2576226012@qq.com
- * @LastEditTime: 2025-03-23 15:05:03
+ * @LastEditTime: 2025-04-02 15:45:50
  * @FilePath: \CHMath-wiki\docs\symbols.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -128,6 +128,22 @@ $$
 \end{array}
 $$
 
+## 群论
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+\text{类别} & \text{符号} & \text{LaTeX表示} & \text{描述} \\
+\hline
+\text{群论} & H \leq G & \verb+H \leq G+ & \text{子群} \\
+\hline
+\text{} & H \unlhd G & \verb+H \unlhd G+ & \text{正规子群} \\
+\hline
+\text{} & H \cong G & \verb+H \cong G+ & \text{群同构; 图形全等(congruent)} \\
+\hline
+\end{array}
+$$
+
 ## 数理逻辑
 
 $$
@@ -151,5 +167,65 @@ $$
 ## 积分符号
 
 ## 希腊字母
+
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+\text{类别} & \text{符号} & \text{LaTeX表示} & \text{描述} \\
+\hline
+\text{希腊字母} & \alpha & \verb+\alpha+ & \text{alpha} \\
+\hline
+\text{} & \beta & \verb+\beta+ & \text{beta} \\
+\hline
+\text{} & \gamma & \verb+\gamma+ & \text{gamma} \\
+\hline
+\text{} & \delta & \verb+\delta+ & \text{delta} \\
+\hline
+\text{} & \epsilon & \verb+\epsilon+ & \text{epsilon} \\
+\hline
+\text{} & \varepsilon & \verb+\varepsilon+ & \text{varepsilon} \\
+\hline
+\text{} & \zeta & \verb+\zeta+ & \text{zeta} \\
+\hline
+\text{} & \eta & \verb+\eta+ & \text{eta} \\
+\hline
+\text{} & \theta & \verb+\theta+ & \text{theta} \\
+\hline
+\text{} & \iota & \verb+\iota+ & \text{iota} \\
+\hline
+\text{} & \kappa & \verb+\kappa+ & \text{kappa} \\
+\hline
+\text{} & \lambda & \verb+\lambda+ & \text{lambda} \\
+\hline
+\text{} & \mu & \verb+\mu+ & \text{mu} \\
+\hline
+\text{} & \nu & \verb+\nu+ & \text{nu} \\
+\hline
+\text{} & \xi & \verb+\xi+ & \text{xi} \\
+\hline
+\text{} & o & \verb+o+ & \text{o} \\
+\hline
+\text{} & \pi & \verb+\pi+ & \text{pi} \\
+\hline
+\text{} & \rho & \verb+\rho+ & \text{rho} \\
+\hline
+\text{} & \sigma & \verb+\sigma+ & \text{sigma} \\
+\hline
+\text{} & \tau & \verb+\tau+ & \text{tau} \\
+\hline
+\text{} & \upsilon & \verb+\upsilon+ & \text{upsilon} \\
+\hline
+\text{} & \phi & \verb+\phi+ & \text{phi} \\
+\hline
+\text{} & \varphi & \verb+\varphi+ & \text{varphi} \\
+\hline
+\text{} & \chi & \verb+\chi+ & \text{chi} \\
+\hline
+\text{} & \psi & \verb+\psi+ & \text{psi} \\
+\hline
+\text{} & \omega & \verb+\omega+ & \text{omega} \\
+\hline
+\end{array}
+$$
 
 ## 括号

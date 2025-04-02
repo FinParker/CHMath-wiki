@@ -2,11 +2,15 @@
  * @Author: chinesehamburger 2576226012@qq.com
  * @Date: 2025-03-21 09:59:29
  * @LastEditors: chinesehamburger 2576226012@qq.com
- * @LastEditTime: 2025-03-21 22:54:47
+ * @LastEditTime: 2025-04-02 15:45:58
  * @FilePath: \CHMath-wiki\docs\discrete_mathematics\algebraic_structure\algebraic_system.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
-# 基本概念回顾
+# 代数系统
+
+## 代数的理解
+
+- 同态映射是这样一种特殊的映射, 保持了对应元素的运算
 
 `A`上二元运算
 
@@ -51,6 +55,8 @@
 | ----------- | ----------- |
 | $\varnothing$ | $\{a,b\}$   |
 | $\{a\}$     | $\{b\}$     |
+
+
 | $\{b\}$     | $\{a\}$     |
 | $\{a,b\}$   | $\varnothing$ |
 
