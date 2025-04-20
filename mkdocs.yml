@@ -26,7 +26,7 @@ nav:
       - 代数系统: discrete_mathematics/algebraic_structure/algebraic_system.md
       - 半群: discrete_mathematics/algebraic_structure/semigroup.md
       - 独异点(幺半群): discrete_mathematics/algebraic_structure/monoid.md
-      - 群: discrete_mathematics/algebraic_structure/group.md
+      - 群(正在更新中): discrete_mathematics/algebraic_structure/group.md
       - 环: discrete_mathematics/algebraic_structure/ring.md
       - 域: discrete_mathematics/algebraic_structure/field.md
       - 多项式: discrete_mathematics/algebraic_structure/polynomial.md
