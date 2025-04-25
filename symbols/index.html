@@ -18,7 +18,7 @@
         <link rel="prev" href="../intro/about/">
       
       
-        <link rel="next" href="../discrete_mathematics/concepts/basics/">
+        <link rel="next" href="../specification/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -462,6 +462,28 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    模板
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -473,10 +495,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -489,8 +511,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             离散数学
           </label>
@@ -513,10 +535,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
         
           
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
             
   
   
@@ -529,8 +551,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             定义汇总
           </label>
@@ -630,10 +652,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
   
@@ -646,8 +668,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
             代数结构
           </label>
@@ -688,30 +710,7 @@
   
   
   <span class="md-ellipsis">
-    半群
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../discrete_mathematics/algebraic_structure/monoid/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    独异点(幺半群)
+    半群和独异点(幺半群)
     
   </span>
   
@@ -1076,7 +1075,11 @@
 \hline
 \text{运算} &amp; \cap &amp; \verb+\cap+ &amp; \text{集合交运算} \\
 \hline
+\text{运算} &amp; \bigcap &amp; \verb+\bigcap+ &amp; \text{集合大交运算} \\
+\hline
 \text{} &amp; \cup &amp; \verb+\cup+ &amp; \text{集合并运算} \\
+\hline
+\text{} &amp; \bigcup &amp; \verb+\bigcup+ &amp; \text{集合大并运算} \\
 \hline
 \text{} &amp; \subseteq &amp; \verb+\subseteq+ &amp; \text{子集} \\
 \hline
@@ -1150,11 +1153,19 @@
 \hline
 \text{} &amp; \forall &amp; \verb+\forall+ &amp; \text{任意} \\
 \hline
-\text{} &amp; \rightarrow &amp; \verb+\rightarrow+ &amp; \text{充分性} \\
+\text{} &amp; \land &amp; \verb+\land+ &amp; \text{且} \\
 \hline
-\text{} &amp; \leftarrow &amp; \verb+\leftarrow+ &amp; \text{必要性} \\
+\text{} &amp; \lor &amp; \verb+\lor+ &amp; \text{或} \\
 \hline
-\text{} &amp; \leftrightarrow &amp; \verb+\leftrightarrow+ &amp; \text{等价于} \\
+\text{} &amp; \rightarrow &amp; \verb+\rightarrow+ &amp; \text{蕴含} \\
+\hline
+\text{} &amp; \leftarrow &amp; \verb+\leftarrow+ &amp; \text{反蕴含} \\
+\hline
+\text{} &amp; \Rightarrow &amp; \verb+\Rightarrow+ &amp; \text{必要性} \\
+\hline
+\text{} &amp; \Leftarrow &amp; \verb+\Reftarrow+ &amp; \text{充分性} \\
+\hline
+\text{} &amp; \Leftrightarrow &amp; \verb+\Leftrightarrow+ &amp; \text{等价于} \\
 \hline
 \end{array}
 \]</div>
