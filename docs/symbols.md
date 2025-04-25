@@ -75,7 +75,11 @@ $$
 \hline
 \text{运算} & \cap & \verb+\cap+ & \text{集合交运算} \\
 \hline
+\text{运算} & \bigcap & \verb+\bigcap+ & \text{集合大交运算} \\
+\hline
 \text{} & \cup & \verb+\cup+ & \text{集合并运算} \\
+\hline
+\text{} & \bigcup & \verb+\bigcup+ & \text{集合大并运算} \\
 \hline
 \text{} & \subseteq & \verb+\subseteq+ & \text{子集} \\
 \hline
@@ -155,11 +159,19 @@ $$
 \hline
 \text{} & \forall & \verb+\forall+ & \text{任意} \\
 \hline
-\text{} & \rightarrow & \verb+\rightarrow+ & \text{充分性} \\
+\text{} & \land & \verb+\land+ & \text{且} \\
 \hline
-\text{} & \leftarrow & \verb+\leftarrow+ & \text{必要性} \\
+\text{} & \lor & \verb+\lor+ & \text{或} \\
 \hline
-\text{} & \leftrightarrow & \verb+\leftrightarrow+ & \text{等价于} \\
+\text{} & \rightarrow & \verb+\rightarrow+ & \text{蕴含} \\
+\hline
+\text{} & \leftarrow & \verb+\leftarrow+ & \text{反蕴含} \\
+\hline
+\text{} & \Rightarrow & \verb+\Rightarrow+ & \text{必要性} \\
+\hline
+\text{} & \Leftarrow & \verb+\Reftarrow+ & \text{充分性} \\
+\hline
+\text{} & \Leftrightarrow & \verb+\Leftrightarrow+ & \text{等价于} \\
 \hline
 \end{array}
 $$

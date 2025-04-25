@@ -17,6 +17,7 @@ nav:
     - 开始: index.md
     - 关于本项目: intro/about.md
   - 符号表: symbols.md
+  - 模板: specification.md
   - 离散数学:
     - 定义汇总:
       - 基本定义: discrete_mathematics/concepts/basics.md
@@ -24,8 +25,7 @@ nav:
     - 图论: discrete_mathematics/graph_theory.md
     - 代数结构: 
       - 代数系统: discrete_mathematics/algebraic_structure/algebraic_system.md
-      - 半群: discrete_mathematics/algebraic_structure/semigroup.md
-      - 独异点(幺半群): discrete_mathematics/algebraic_structure/monoid.md
+      - 半群和独异点(幺半群): discrete_mathematics/algebraic_structure/semigroup.md
       - 群(正在更新中): discrete_mathematics/algebraic_structure/group.md
       - 环: discrete_mathematics/algebraic_structure/ring.md
       - 域: discrete_mathematics/algebraic_structure/field.md
