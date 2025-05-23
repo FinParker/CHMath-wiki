@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/discrete_mathematics/algebraic_structure/group.md",
+                "file": "docs/tricks/阶乘.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "group"
+              "title": "阶乘"
             }
           }
         ]
@@ -170,13 +170,25 @@
   },
   "active": "090fa7c68258ccef",
   "lastOpenFiles": [
-    "docs/discrete_mathematics/algebraic_structure/ring.md",
-    "tongyi 提示词.md",
-    "docs/discrete_mathematics/algebraic_structure/semigroup.md",
+    "docs/tricks/有理分式的拆分.md",
+    "docs/tricks/阶乘.md",
+    "docs/number_theory/basic.md",
+    "docs/tricks",
+    "docs/index.md",
+    "docs/applied_math",
+    "未命名 1",
+    "docs/probability_statistics",
+    "docs/geometry",
+    "docs/analysis",
+    "未命名",
+    "README.md",
+    "docs/number_theory",
     "docs/discrete_mathematics/algebraic_structure/group.md",
+    "tongyi 提示词.md",
+    "docs/discrete_mathematics/algebraic_structure/ring.md",
+    "docs/discrete_mathematics/algebraic_structure/semigroup.md",
     "docs/discrete_mathematics/algebraic_structure/algebraic_system.md",
     "docs/symbols.md",
-    "Pasted image 20250421213514.png",
-    "README.md"
+    "Pasted image 20250421213514.png"
   ]
 }

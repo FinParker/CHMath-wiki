@@ -1,8 +1,8 @@
 <!--
  * @Author: FinParker 2576226012@qq.com
  * @Date: 2025-03-20 20:09:52
- * @LastEditors: FinParker 2576226012@qq.com
- * @LastEditTime: 2025-04-03 13:26:23
+ * @LastEditors: iming 2576226012@qq.com
+ * @LastEditTime: 2025-04-28 08:17:06
  * @FilePath: \CHMath-wiki\docs\index.md
  * @Description: 
 -->
@@ -15,7 +15,8 @@
 目前更新内容
 
 - 离散数学
-  - 代数结构
+  - 代数
+    - [半群和独异点](./discrete_mathematics/algebraic_structure/group.md)
     - 群论
     - 环
 

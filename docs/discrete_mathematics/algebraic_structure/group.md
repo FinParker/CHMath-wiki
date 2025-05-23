@@ -378,7 +378,17 @@ $$
 $$
 若$[G: N(a)] = 1, 则 |\bar a|=1, 即\bar a = \{a\}, 即a\in C$
 
-![[Pasted image 20250421213514.png]]
+**证明** $|\bar{a}|=[G:N(a)]$
+
+其中 $N(a)=\{x\in G|xa=ax\}$
+
+**证** $\forall x,y\in G$,
+
+$xax^{-1}=yay^{-1} \Leftrightarrow ax^{-1}y=x^{-1}ya$
+
+$\Leftrightarrow x^{-1}y\in N(a) \Leftrightarrow xN(a)=yN(a)$
+
+故存在双射：$\{xax^{-1}|x\in G\} \leftrightarrow \{xN(a)|x\in G\}$
 
 
 **定理 31** (群的分类方程) $G$ 是有限群，$C$ 是 $G$ 的中心. 设 $G$ 中至少含有两个元素的共轭类有 $k$ 个，且 $a_1,a_2,\ldots,a_k$ 分别为这 $k$ 个共轭类的代表元素，则  
@@ -461,6 +471,7 @@ $\text{ker}f=\{e_1\} \Leftrightarrow f$ 为单同态
 设$\varphi$是群$G$到群$\overline{G}$的一个满同态，且$\ker\varphi\subseteq N\trianglelefteq G$，记$\varphi(N)=\overline{N}$，则 $G/N\cong\overline{G}/\overline{N}$，或$G/N\cong\varphi(G)/\varphi(N)$。 当$N=\ker\varphi$时，$\varphi(N)=\{\overline{e}\}$，$\overline{G}/\overline{N}=\overline{G}/\{\overline{e}\}\cong\overline{G}$，第一同构定理退化成同态基本定理。
 
 推论 设$H\trianglelefteq G$，$N\trianglelefteq G$且$N\subseteq H$，则 $$G/H\cong\frac{G/N}{H/N}.$$ **证**：取自然同态$\varphi:G\to G/N$，$\varphi(a)=aN$，其核$\ker\varphi=N$。在第一同构定理中取$\overline{G}=G/N$，取$N$为这里的$H$，并注意$\varphi(H)=H/N$，由第一同构定理得$G/H\cong\frac{G/N}{H/N}$。
+
 ## 自同态与自同构
 
 $End \ G$: G上的所有映射中自同态映射的集合

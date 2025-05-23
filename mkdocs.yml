@@ -33,6 +33,10 @@ nav:
     - 组合数学: discrete_mathematics/combinatorics.md
     - 数理逻辑: discrete_mathematics/mathematical_logic.md
     - 自动机理论: discrete_mathematics/automata_theory.md
+  - 数论: number_theory/basic.md
+  - 技巧: 
+    - 阶乘: tricks/阶乘.md 
+    - 有理分式的拆分: tricks/有理分式的拆分.md
 
 
 # 主题
