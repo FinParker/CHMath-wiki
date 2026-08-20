@@ -48,6 +48,9 @@ mkdocs build --strict             # 严格构建（CI 同款）
 mkdocs gh-deploy --force          # 部署到 gh-pages（或由 CI 自动完成）
 ```
 
+> 若构建日志出现 mkdocs-material 关于 MkDocs 2.0 的横幅噪音，
+> 可设置环境变量 `NO_MKDOCS_2_WARNING=true` 抑制（CI 已默认设置）。
+
 ## 发布流程
 
 推送到 `main` 分支后，GitHub Actions 自动执行：

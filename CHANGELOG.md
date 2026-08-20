@@ -5,6 +5,11 @@
 
 ## [Unreleased]
 
+### Added
+
+- 新增 LICENSE（CC BY-SA 4.0）并重写 README。
+- CI 升级：Python 3.12 + 依赖缓存 + 部署前严格构建校验（`.github/workflows/deploy-docs.yml`）。
+
 ## [0.2.0] - 2025-06-11
 
 ### Added
