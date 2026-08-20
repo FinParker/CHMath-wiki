@@ -1,1 +1,23 @@
+# 本地提示文件（不入库）
 tongyi_tip.md
+
+# --- Python / mkdocs ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# --- 构建产物 (mkdocs build 输出) ---
+site/
+
+# --- 本地编辑器配置 (个人环境,不入库) ---
+.obsidian/
+.vscode/
+
+# --- 操作系统 ---
+.DS_Store
+Thumbs.db
+
+# --- 其他 ---
+*.log
