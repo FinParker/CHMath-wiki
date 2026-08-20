@@ -45,7 +45,7 @@ mkdocs build --strict
 
 - 文件一律 **UTF-8** 编码，**LF** 换行。
 - 文件名使用英文小写蛇形命名（如 `set_theory.md`），中文只出现在标题与正文中。
-- 交叉链接使用**相对路径**的 Markdown 链接（`[集合](basics.md)`），
+- 交叉链接使用**相对路径**的 Markdown 链接（`[集合](../foundations/set_theory/basics.md)`），
   这样在 Obsidian 与 mkdocs 中都能正常跳转。
 - 每个页面的 front matter 至少包含 `title` 与 `tags`。
 

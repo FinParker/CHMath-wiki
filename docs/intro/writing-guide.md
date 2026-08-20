@@ -81,6 +81,6 @@ tags:
 
 ## 交叉链接
 
-- 链接使用相对路径：`[范畴](../category_theory/categories.md)`。
+- 链接使用相对路径：`[范畴](../foundations/category_theory/categories.md)`。
 - 不要链接到尚不存在的页面（会破坏严格构建）；先创建页面再链接。
 - 每个页面的"延伸阅读"至少包含 2 个相关链接，让知识形成网络。

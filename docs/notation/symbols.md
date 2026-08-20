@@ -189,7 +189,7 @@ $$
 \hline
 \text{} & \Rightarrow & \verb+\Rightarrow+ & \text{必要性} \\
 \hline
-\text{} & \Leftarrow & \verb+\Reftarrow+ & \text{充分性} \\
+\text{} & \Leftarrow & \verb+\Leftarrow+ & \text{充分性} \\
 \hline
 \text{} & \Leftrightarrow & \verb+\Leftrightarrow+ & \text{等价于} \\
 \hline
