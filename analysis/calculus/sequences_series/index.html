@@ -1,0 +1,4181 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="CHMath-wiki：一个旨在通过提供精准、简洁且抓住问题本质的数学内容， 来提升数学理解能力的中文资料库。">
+      
+      
+        <meta name="author" content="CHMath-wiki Team">
+      
+      
+        <link rel="canonical" href="https://finparker.github.io/CHMath-wiki/analysis/calculus/sequences_series/">
+      
+      
+        <link rel="prev" href="../integrals/">
+      
+      
+        <link rel="next" href="../../real/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>数列与级数 - CHMath-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="CHMath-wiki" class="md-header__button md-logo" aria-label="CHMath-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CHMath-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              数列与级数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light-blue"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FinParker/CHMath-wiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CHMath-wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CHMath-wiki" class="md-nav__button md-logo" aria-label="CHMath-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    CHMath-wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FinParker/CHMath-wiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CHMath-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../intro/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    入门
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    入门
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于本项目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内容路线图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    贡献指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/writing-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    写作规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    符号表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../foundations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数学基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../foundations/logic/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理逻辑
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数理逻辑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/logic/propositional_logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    命题逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/logic/predicate_logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    谓词逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../foundations/set_theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    集合论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    集合论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基本概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    集合运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/relations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/cardinality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基数与势
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/ordinals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    序数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/zfc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZFC 公理系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/axiom_of_choice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    选择公理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../foundations/category_theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    范畴论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    范畴论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    范畴
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/morphisms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    态射与同构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/functors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/natural_transformations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自然变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/universal_properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    泛性质与极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/yoneda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yoneda 引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../algebra/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代数
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    代数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../algebra/structures/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代数结构
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    代数结构
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/algebraic_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代数系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/semigroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    半群与幺半群
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/group/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    群
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/ring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/field/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/polynomial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多项式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../algebra/linear/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/vector_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    向量空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/linear_maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性映射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/matrices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    矩阵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/determinants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行列式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/eigenvalues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    特征值与特征向量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    导数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数列与级数
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数列与级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数列极限
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cauchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单调有界定理与 Cauchy 准则
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        级数的基本概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        正项级数的判别法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交错级数与绝对收敛
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        幂级数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="幂级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        和函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例子
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        延伸阅读
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../real/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    实分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/real_numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实数公理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/topology_of_r/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实数的拓扑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    连续函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微分学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riemann 积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../complex/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    复分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/complex_numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/holomorphic_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全纯函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    几何
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../topology/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    拓扑学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    拓扑学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/topological_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    拓扑空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/connectedness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    连通性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/compactness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    紧致性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../number_theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../number_theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    初等数论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../number_theory/primes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    素数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../number_theory/modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../discrete_mathematics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    离散数学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    离散数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discrete_mathematics/combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    组合数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discrete_mathematics/graph_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discrete_mathematics/automata_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动机理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../probability_statistics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概率与统计
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    概率与统计
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../probability_statistics/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概率论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../probability_statistics/random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    随机变量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applied_math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    应用数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tricks/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    解题技巧
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    解题技巧
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tricks/factorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶乘
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tricks/partial_fractions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    有理分式的拆分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../elementary/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    初等数学(草稿)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_14" id="__nav_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    初等数学(草稿)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/inequalities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/number_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    等式与方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简单逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目开发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数列极限
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cauchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单调有界定理与 Cauchy 准则
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        级数的基本概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        正项级数的判别法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交错级数与绝对收敛
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        幂级数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="幂级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        和函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例子
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        延伸阅读
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:微积分" class="md-tag">微积分</a>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h1 id="_1">数列与级数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>数列是"一步一步走"的极限，级数是"一项一项加"的极限。</p>
+</blockquote>
+<h2 id="_2">概述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>极限有两种基本载体：<strong>数列</strong>（离散地趋于某个值）与<strong>函数</strong>（连续地趋于某个值）。级数则是"无穷和"——先算部分和，再让部分和数列趋于极限。由此，级数理论完全建立在数列极限之上；而幂级数把"无穷多项式"变成强大的分析工具，支撑起函数展开、近似计算与微分方程解法。学习本页的核心线索是：一切级数问题最终都归结为数列极限问题。</p>
+<h2 id="_3">数列极限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><strong>定义 1（数列极限，ε-N 定义）</strong> 设 <span class="arithmatex">\(\{a_n\}\)</span> 为实数数列。若对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在正整数 <span class="arithmatex">\(N\)</span>，使得当 <span class="arithmatex">\(n &gt; N\)</span> 时 <span class="arithmatex">\(|a_n - a| &lt; \varepsilon\)</span>，则称 <span class="arithmatex">\(\{a_n\}\)</span> 收敛于 <span class="arithmatex">\(a\)</span>，记 <span class="arithmatex">\(\lim_{n \to \infty} a_n = a\)</span>。</p>
+<p><strong>例 1</strong> <span class="arithmatex">\(\lim_{n \to \infty} \dfrac{1}{n} = 0\)</span>：对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span> 取 <span class="arithmatex">\(N &gt; 1/\varepsilon\)</span> 即可。又 <span class="arithmatex">\(\lim_{n \to \infty} \dfrac{2n + 1}{n} = 2\)</span>。</p>
+<p><strong>性质</strong>（与函数极限平行，证明也类似，见<a href="../limits/">极限</a>）：</p>
+<ul>
+<li><strong>唯一性</strong>：收敛数列的极限唯一。</li>
+<li><strong>有界性</strong>：收敛数列必有界（反之不真，如 <span class="arithmatex">\((-1)^n\)</span> 有界但不收敛）。</li>
+<li><strong>四则运算</strong>：<span class="arithmatex">\(\lim (a_n \pm b_n) = a \pm b\)</span>，<span class="arithmatex">\(\lim (a_n b_n) = ab\)</span>；<span class="arithmatex">\(\lim b_n \ne 0\)</span> 时 <span class="arithmatex">\(\lim \dfrac{a_n}{b_n} = \dfrac{a}{b}\)</span>。</li>
+<li><strong>夹逼准则</strong>：若 <span class="arithmatex">\(a_n \le c_n \le b_n\)</span> 且 <span class="arithmatex">\(\lim a_n = \lim b_n = L\)</span>，则 <span class="arithmatex">\(\lim c_n = L\)</span>。</li>
+<li><strong>保号性</strong>：若 <span class="arithmatex">\(\lim a_n = a &gt; 0\)</span>，则从某项起 <span class="arithmatex">\(a_n &gt; 0\)</span>。</li>
+<li><strong>子列</strong>：若 <span class="arithmatex">\(a_n \to a\)</span>，则其任何子列 <span class="arithmatex">\(a_{n_k} \to a\)</span>；反之，若奇数项子列与偶数项子列收敛于同一极限，则原数列收敛（常用于判断数列极限不存在：取两个极限不同的子列）。</li>
+</ul>
+<p><strong>定理 1（归结原则）</strong> 函数极限与数列极限由此连通：<span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span> 当且仅当对一切满足 <span class="arithmatex">\(x_n \to a\)</span>（<span class="arithmatex">\(x_n \ne a\)</span>）的数列 <span class="arithmatex">\(\{x_n\}\)</span> 都有 <span class="arithmatex">\(\lim_{n \to \infty} f(x_n) = L\)</span>（详见<a href="../limits/">极限</a>）。</p>
+<h2 id="cauchy">单调有界定理与 Cauchy 准则<a class="headerlink" href="#cauchy" title="Permanent link">&para;</a></h2>
+<p><strong>定理 2（单调有界定理）</strong> 单调递增且有上界的数列必收敛，且极限等于其上确界；单调递减且有下界的数列必收敛于其下确界。</p>
+<p><strong>证明（思想）</strong> 这是实数完备性的直接推论：设 <span class="arithmatex">\(\{a_n\}\)</span> 单调递增有上界，由确界原理（见<a href="../../real/">实分析</a>），上确界 <span class="arithmatex">\(a = \sup\{a_n\}\)</span> 存在。对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，<span class="arithmatex">\(a - \varepsilon\)</span> 不是上界，故存在某项 <span class="arithmatex">\(a_N &gt; a - \varepsilon\)</span>；由单调性，当 <span class="arithmatex">\(n &gt; N\)</span> 时 <span class="arithmatex">\(a - \varepsilon &lt; a_n \le a\)</span>，即 <span class="arithmatex">\(|a_n - a| &lt; \varepsilon\)</span>。</p>
+<div class="admonition note">
+<p class="admonition-title">要点</p>
+<p>单调有界定理与确界原理互为表里：前者说"单调 + 有界"保证收敛，后者说"有界集合"保证确界存在。定理 2 的证明正是先用确界原理"猜出"极限，再验证收敛——这种"先证存在、再求值"的思路贯穿整个分析学。</p>
+</div>
+<p><strong>推论 1（Bolzano–Weierstrass 定理）</strong> 有界数列必有收敛子列。证明思路：有界数列可取单调子列（把数列"二分"筛选），再对单调有界子列用定理 2。它是闭区间上连续函数最值定理的证明支柱。</p>
+<p><strong>例（迭代数列）</strong> 设 <span class="arithmatex">\(a_1 = \sqrt{2}\)</span>，<span class="arithmatex">\(a_{n+1} = \sqrt{2 + a_n}\)</span>。由归纳法 <span class="arithmatex">\(a_n &lt; 2\)</span>（若 <span class="arithmatex">\(a_n &lt; 2\)</span> 则 <span class="arithmatex">\(a_{n+1} &lt; \sqrt{4} = 2\)</span>），且 <span class="arithmatex">\(a_{n+1} &gt; a_n\)</span>（由 <span class="arithmatex">\(a_n^2 &lt; a_n + 2\)</span>），故单调递增有上界，收敛。设极限为 <span class="arithmatex">\(L\)</span>，对递推式取极限得 <span class="arithmatex">\(L = \sqrt{2 + L}\)</span>，解得 <span class="arithmatex">\(L = 2\)</span>。这类"先证存在（单调有界），再代极限求值"是递推数列的标准套路。</p>
+<p><strong>定理 3（Cauchy 收敛准则）</strong> 数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛当且仅当对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(N\)</span>，使得当 <span class="arithmatex">\(n, m &gt; N\)</span> 时 <span class="arithmatex">\(|a_n - a_m| &lt; \varepsilon\)</span>（即"尾部任意两项都足够接近"）。Cauchy 准则的优越之处在于：判定收敛<strong>不需要预先知道极限值</strong>。这一点在级数与函数项级数理论中至关重要。</p>
+<p>级数形式的 Cauchy 准则：<span class="arithmatex">\(\sum a_n\)</span> 收敛当且仅当对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span> 存在 <span class="arithmatex">\(N\)</span>，使得当 <span class="arithmatex">\(n &gt; m &gt; N\)</span> 时 <span class="arithmatex">\(|a_{m+1} + a_{m+2} + \cdots + a_n| &lt; \varepsilon\)</span>——级数的"长尾巴"可以任意短。它也是定理 5（必要条件 <span class="arithmatex">\(a_n \to 0\)</span>）的来源。</p>
+<p><strong>定理 4（常数 <span class="arithmatex">\(e\)</span>）</strong> 数列 <span class="arithmatex">\(\left\{ \left( 1 + \dfrac{1}{n} \right)^n \right\}\)</span> 单调递增且有上界，故收敛；其极限记为 <span class="arithmatex">\(e\)</span>：
+$$
+e = \lim_{n \to \infty} \left( 1 + \frac{1}{n} \right)^n \approx 2.71828.
+$$
+<strong>证明（思想）</strong> 单调性用二项式展开逐项比较 <span class="arithmatex">\(a_n\)</span> 与 <span class="arithmatex">\(a_{n+1}\)</span>；有界性用展开式放缩 <span class="arithmatex">\(\left( 1 + \frac{1}{n} \right)^n &lt; \sum_{k=0}^{n} \frac{1}{k!} &lt; 1 + 1 + \frac{1}{2} + \frac{1}{2^2} + \cdots &lt; 3\)</span>。</p>
+<p><strong>重要数列极限</strong>（均可由上述工具证明）：</p>
+<div class="arithmatex">\[
+\lim_{n \to \infty} n^{1/n} = 1, \qquad
+\lim_{n \to \infty} a^{1/n} = 1 \ (a &gt; 0), \qquad
+\lim_{n \to \infty} \frac{n!}{n^n} = 0, \qquad
+\lim_{n \to \infty} \frac{\ln n}{n} = 0.
+\]</div>
+<p><strong>证明（思想，<span class="arithmatex">\(n^{1/n} \to 1\)</span>）</strong> 记 <span class="arithmatex">\(n^{1/n} = 1 + h_n\)</span>（<span class="arithmatex">\(h_n \ge 0\)</span>），由二项式展开
+$$
+n = (1 + h_n)^n \ge \binom{n}{2} h_n^2 = \frac{n(n-1)}{2} h_n^2,
+$$
+得 <span class="arithmatex">\(0 \le h_n^2 \le \dfrac{2}{n - 1} \to 0\)</span>，夹逼即得。<span class="arithmatex">\(n!/n^n \to 0\)</span> 可夹逼：<span class="arithmatex">\(0 \le \dfrac{n!}{n^n} \le \dfrac{1}{n}\)</span>。</p>
+<h2 id="_4">级数的基本概念<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>定义 2（级数与部分和）</strong> 无穷级数 <span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span> 的部分和为 <span class="arithmatex">\(S_n = a_1 + a_2 + \cdots + a_n\)</span>。若部分和数列 <span class="arithmatex">\(\{S_n\}\)</span> 收敛于 <span class="arithmatex">\(S\)</span>，则称级数收敛，和为 <span class="arithmatex">\(S\)</span>；否则发散。</p>
+<p>级数理论因此是数列理论的"衍生品"：研究级数 = 研究部分和数列。<strong>级数与数列的对应</strong>：<span class="arithmatex">\(\sum a_n\)</span> 收敛于 <span class="arithmatex">\(S\)</span> 等价于 <span class="arithmatex">\(S_n \to S\)</span>；级数收敛时其<strong>尾部</strong> <span class="arithmatex">\(\sum_{k=n}^{\infty} a_k \to 0\)</span>（<span class="arithmatex">\(n \to \infty\)</span>），这是 Cauchy 准则的直接推论。<strong>几何级数</strong>是最基本的模型：
+$$
+\sum_{n=0}^{\infty} r^n = 1 + r + r^2 + \cdots = \frac{1}{1 - r} \iff |r| &lt; 1;
+$$
+<span class="arithmatex">\(|r| \ge 1\)</span> 时发散。另一类可直接求和的模型是<strong>裂项（telescoping）级数</strong>：<span class="arithmatex">\(\dfrac{1}{n(n+1)} = \dfrac{1}{n} - \dfrac{1}{n+1}\)</span>，故
+$$
+\sum_{n=1}^{\infty} \frac{1}{n(n+1)} = \lim_{n \to \infty} \left( 1 - \frac{1}{n+1} \right) = 1.
+$$
+几何级数还给出循环小数化分数的严格依据：例如 <span class="arithmatex">\(0.\overline{9} = \dfrac{9}{10} + \dfrac{9}{10^2} + \cdots = \dfrac{9/10}{1 - 1/10} = 1\)</span>，即"<span class="arithmatex">\(0.\overline{9} = 1\)</span>"正是几何级数求和的结果。</p>
+<p><strong>定理 5（收敛的必要条件）</strong> 若 <span class="arithmatex">\(\sum a_n\)</span> 收敛，则 <span class="arithmatex">\(\lim a_n = 0\)</span>。</p>
+<div class="admonition warning">
+<p class="admonition-title">易错点</p>
+<p>必要条件<strong>不充分</strong>：<span class="arithmatex">\(a_n \to 0\)</span> 不能推出级数收敛。典型反例是调和级数 <span class="arithmatex">\(\sum \dfrac{1}{n}\)</span>：虽然 <span class="arithmatex">\(\dfrac{1}{n} \to 0\)</span>，但它发散——按 <span class="arithmatex">\(2^k\)</span> 项分组，<span class="arithmatex">\(1 + \dfrac{1}{2} + \left( \dfrac{1}{3} + \dfrac{1}{4} \right) + \cdots &gt; 1 + \dfrac{1}{2} + \dfrac{1}{2} + \cdots\)</span>，部分和无界增长。</p>
+</div>
+<p><strong>定理 6（线性）</strong> 若 <span class="arithmatex">\(\sum a_n\)</span>、<span class="arithmatex">\(\sum b_n\)</span> 收敛，则 <span class="arithmatex">\(\sum (\alpha a_n + \beta b_n)\)</span> 收敛且等于相应线性组合；级数的敛散性与改变有限项无关（去掉前 <span class="arithmatex">\(N\)</span> 项不改变敛散性，只改变和的值）。</p>
+<p><strong>加括号</strong>：收敛级数任意加括号（把相邻若干项先求和再级联）后仍收敛且和不变；但逆命题不真——加括号后收敛的级数未必收敛（如 <span class="arithmatex">\(1 + (-1) + 1 + (-1) + \cdots\)</span> 按两项括起来和恒为 0）。</p>
+<h2 id="_5">正项级数的判别法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>对 <span class="arithmatex">\(a_n \ge 0\)</span> 的级数，部分和单调递增，故<strong>收敛 ⟺ 部分和有界</strong>（单调有界定理）。判别问题于是简化为一件事：控制部分和。</p>
+<p><strong>定理 7（比较判别法）</strong> 若 <span class="arithmatex">\(0 \le a_n \le b_n\)</span>：</p>
+<ul>
+<li><span class="arithmatex">\(\sum b_n\)</span> 收敛 ⟹ <span class="arithmatex">\(\sum a_n\)</span> 收敛；</li>
+<li><span class="arithmatex">\(\sum a_n\)</span> 发散 ⟹ <span class="arithmatex">\(\sum b_n\)</span> 发散。</li>
+</ul>
+<p><strong>极限形式</strong>：若 <span class="arithmatex">\(\lim \dfrac{a_n}{b_n} = c \in (0, +\infty)\)</span>，则 <span class="arithmatex">\(\sum a_n\)</span> 与 <span class="arithmatex">\(\sum b_n\)</span> 同敛散；若 <span class="arithmatex">\(c = 0\)</span>，则由 <span class="arithmatex">\(\sum b_n\)</span> 收敛可推出 <span class="arithmatex">\(\sum a_n\)</span> 收敛。比较对象常用 <strong>p-级数</strong>：<span class="arithmatex">\(\sum \dfrac{1}{n^p}\)</span> 当且仅当 <span class="arithmatex">\(p &gt; 1\)</span> 时收敛（<span class="arithmatex">\(p \le 1\)</span> 时发散）。</p>
+<p><strong>定理 8（比值判别法，d'Alembert）</strong> 设 <span class="arithmatex">\(a_n &gt; 0\)</span> 且 <span class="arithmatex">\(\lim \dfrac{a_{n+1}}{a_n} = \rho\)</span>：</p>
+<ul>
+<li><span class="arithmatex">\(\rho &lt; 1\)</span> 时收敛；<span class="arithmatex">\(\rho &gt; 1\)</span> 时发散；<span class="arithmatex">\(\rho = 1\)</span> 时<strong>无法判定</strong>。</li>
+</ul>
+<p><strong>定理 9（根值判别法，Cauchy）</strong> 设 <span class="arithmatex">\(a_n \ge 0\)</span> 且 <span class="arithmatex">\(\lim \sqrt[n]{a_n} = \rho\)</span>：<span class="arithmatex">\(\rho &lt; 1\)</span> 时收敛，<span class="arithmatex">\(\rho &gt; 1\)</span> 时发散，<span class="arithmatex">\(\rho = 1\)</span> 时无法判定。</p>
+<div class="admonition note">
+<p class="admonition-title">要点</p>
+<p>比值与根值判别法本质上都是与几何级数比较：<span class="arithmatex">\(\rho &lt; 1\)</span> 意味着 <span class="arithmatex">\(a_n\)</span> 最终被某个 <span class="arithmatex">\(r^n\)</span>（<span class="arithmatex">\(r &lt; 1\)</span>）控制。当 <span class="arithmatex">\(\lim \dfrac{a_{n+1}}{a_n} = 1\)</span> 时（如 <span class="arithmatex">\(\sum \dfrac{1}{n}\)</span> 与 <span class="arithmatex">\(\sum \dfrac{1}{n^2}\)</span>），需改用比较判别法或积分判别法——对单调递减的非负函数 <span class="arithmatex">\(f\)</span>，<span class="arithmatex">\(\sum f(n)\)</span> 与 <span class="arithmatex">\(\int_1^{+\infty} f\)</span> 同敛散（见<a href="../integrals/">积分</a>）。</p>
+</div>
+<p><strong>例 2</strong> <span class="arithmatex">\(\sum \dfrac{n}{2^n}\)</span>：<span class="arithmatex">\(\dfrac{a_{n+1}}{a_n} = \dfrac{n + 1}{2n} \to \dfrac{1}{2} &lt; 1\)</span>，收敛。<span class="arithmatex">\(\sum \dfrac{1}{n!}\)</span> 收敛（比值 <span class="arithmatex">\(\to 0\)</span>），且 <span class="arithmatex">\(\sum_{n=0}^{\infty} \dfrac{1}{n!} = e\)</span>。</p>
+<p>比值与根值两种判别法各有分工：含阶乘、幂次的级数适合比值判别法；含 <span class="arithmatex">\(n\)</span> 次幂（如 <span class="arithmatex">\(a_n = \left(\dfrac{n}{2n+1}\right)^n\)</span>）的级数适合根值判别法。当 <span class="arithmatex">\(\lim \dfrac{a_{n+1}}{a_n}\)</span> 不存在时比值法失效，根值法可能仍可判定。</p>
+<p><strong>判别流程建议</strong>：先看一般项是否趋于零（不趋于零必发散）→ 正项级数依次尝试"比较（对照 p-级数）→ 比值/根值"→ 出现正负交替先判绝对收敛 → 绝对收敛不成立再用 Leibniz 判别法。口诀："先看通项，再比几何，符号交替找 Leibniz"。</p>
+<h2 id="_6">交错级数与绝对收敛<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p><strong>定义 3（交错级数）</strong> 形如 <span class="arithmatex">\(\sum_{n=1}^{\infty} (-1)^{n-1} a_n\)</span>（<span class="arithmatex">\(a_n \ge 0\)</span>）的级数，正负项交替出现。</p>
+<p><strong>定理 10（Leibniz 判别法）</strong> 若 <span class="arithmatex">\(a_n\)</span> 单调递减且 <span class="arithmatex">\(\lim a_n = 0\)</span>，则交错级数 <span class="arithmatex">\(\sum (-1)^{n-1} a_n\)</span> 收敛；其余项满足
+$$
+|R_n| = \left| \sum_{k=n+1}^{\infty} (-1)^{k-1} a_k \right| \le a_{n+1}.
+$$</p>
+<p><strong>证明（思想）</strong> 偶部分和 <span class="arithmatex">\(S_{2n}\)</span> 单调递增且有上界（<span class="arithmatex">\(S_{2n} = S_{2n-2} + a_{2n-1} - a_{2n} \ge S_{2n-2}\)</span>，且 <span class="arithmatex">\(S_{2n} \le a_1\)</span>），奇部分和单调递减，两者夹逼到同一极限；余项估计来自项符号交替、绝对值递减。</p>
+<p><strong>例 3（交错调和级数）</strong> <span class="arithmatex">\(\sum_{n=1}^{\infty} \dfrac{(-1)^{n-1}}{n} = \ln 2\)</span>：Leibniz 判别法保证收敛，和可由 <span class="arithmatex">\(\ln(1 + x)\)</span> 的幂级数在 <span class="arithmatex">\(x = 1\)</span> 处取值得到（见下文）。它只<strong>条件收敛</strong>：绝对值级数即调和级数，发散。</p>
+<p>由余项估计 <span class="arithmatex">\(|R_n| \le a_{n+1}\)</span>，用前 <span class="arithmatex">\(n\)</span> 项近似 <span class="arithmatex">\(\ln 2\)</span> 的误差不超过 <span class="arithmatex">\(\dfrac{1}{n+1}\)</span>，例如取 10 项误差不超过约 0.09——Leibniz 判别法的余项界使截断误差一目了然，这是交错级数便于数值近似的根本原因。</p>
+<p><strong>定义 4（绝对收敛与条件收敛）</strong> 若 <span class="arithmatex">\(\sum |a_n|\)</span> 收敛，则称 <span class="arithmatex">\(\sum a_n\)</span> <strong>绝对收敛</strong>；收敛但不绝对收敛称为<strong>条件收敛</strong>。</p>
+<p><strong>定理 11（绝对收敛 ⟹ 收敛）</strong> 绝对收敛的级数必收敛。</p>
+<p><strong>证明（思想）</strong> 由 <span class="arithmatex">\(0 \le a_n + |a_n| \le 2|a_n|\)</span> 及比较判别法，<span class="arithmatex">\(\sum (a_n + |a_n|)\)</span> 收敛；再作差 <span class="arithmatex">\(\sum a_n = \sum (a_n + |a_n|) - \sum |a_n|\)</span>。</p>
+<div class="admonition warning">
+<p class="admonition-title">要点</p>
+<p>绝对收敛与条件收敛在运算上有本质区别：绝对收敛级数可以任意重排、逐项相乘，结果仍绝对收敛；条件收敛级数则不能——<strong>Riemann 重排定理</strong>：条件收敛级数可通过重排收敛到任意指定的数，甚至发散。这提醒我们，有限和的交换律在条件收敛下失效。</p>
+</div>
+<h2 id="_7">幂级数<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><strong>定义 5（幂级数与收敛半径）</strong> 形如 <span class="arithmatex">\(\sum_{n=0}^{\infty} a_n x^n\)</span>（或 <span class="arithmatex">\(\sum a_n (x - x_0)^n\)</span>）的级数称为幂级数。对幂级数存在 <span class="arithmatex">\(R \in [0, +\infty]\)</span>（收敛半径）使得：<span class="arithmatex">\(|x| &lt; R\)</span> 时绝对收敛，<span class="arithmatex">\(|x| &gt; R\)</span> 时发散；<span class="arithmatex">\(|x| = R\)</span> 时需逐点讨论。收敛域是 <span class="arithmatex">\((-R, R)\)</span> 加上可能的部分端点。</p>
+<p><strong>定理 12（Cauchy–Hadamard 公式）</strong> 收敛半径由系数唯一确定：
+$$
+\frac{1}{R} = \limsup_{n \to \infty} \sqrt[n]{|a_n|}
+$$
+（约定 <span class="arithmatex">\(1/0 = +\infty\)</span>、<span class="arithmatex">\(1/+\infty = 0\)</span>）。若 <span class="arithmatex">\(\lim \left| \dfrac{a_n}{a_{n+1}} \right|\)</span> 存在，则更方便的比值形式 <span class="arithmatex">\(R = \lim \left| \dfrac{a_n}{a_{n+1}} \right|\)</span> 成立。</p>
+<p><strong>证明（思想）</strong> 对固定的 <span class="arithmatex">\(x\)</span>，考察 <span class="arithmatex">\(\sum |a_n x^n|\)</span>，其根值判别法中的量为 <span class="arithmatex">\(\limsup \sqrt[n]{|a_n|}\,|x| = |x|/R\)</span>：小于 1 时绝对收敛，大于 1 时发散，于是收敛半径的刻画出现。</p>
+<p><strong>幂级数的代数运算</strong>：两个幂级数在收敛区间的公共部分可逐项相加、相减；乘积按 Cauchy 乘积（系数卷积 <span class="arithmatex">\(\sum_{k=0}^{n} a_k b_{n-k}\)</span>）逐项相乘，其收敛半径不小于两者中较小的一个。幂级数在收敛区间内表现得"像多项式"一样可以自由运算。</p>
+<p><strong>例 4</strong> <span class="arithmatex">\(\sum \dfrac{x^n}{n}\)</span>：<span class="arithmatex">\(R = \lim \left| \dfrac{a_n}{a_{n+1}} \right| = \lim \dfrac{n + 1}{n} = 1\)</span>。<span class="arithmatex">\(x = 1\)</span> 处为调和级数（发散），<span class="arithmatex">\(x = -1\)</span> 处为交错调和级数（收敛），故收敛域为 <span class="arithmatex">\([-1, 1)\)</span>。端点必须单独检验。对比之下 <span class="arithmatex">\(\sum \dfrac{x^n}{n!}\)</span> 的收敛半径 <span class="arithmatex">\(R = +\infty\)</span>，在整个实数轴上收敛，和函数正是 <span class="arithmatex">\(e^x\)</span>；而 <span class="arithmatex">\(\sum n!\,x^n\)</span> 的收敛半径 <span class="arithmatex">\(R = 0\)</span>，只在 <span class="arithmatex">\(x = 0\)</span> 收敛——收敛半径可以是无穷大，也可以是零。</p>
+<h3 id="_8">和函数<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><strong>定理 13（逐项运算）</strong> 幂级数 <span class="arithmatex">\(\sum a_n x^n\)</span> 在其收敛区间 <span class="arithmatex">\((-R, R)\)</span> 内可逐项求导与逐项积分，且收敛半径不变：
+$$
+\left( \sum_{n=0}^{\infty} a_n x^n \right)' = \sum_{n=1}^{\infty} n a_n x^{n-1}, \qquad
+\int_0^x \sum_{n=0}^{\infty} a_n t^n \,\mathrm{d}t = \sum_{n=0}^{\infty} \frac{a_n}{n+1} x^{n+1}.
+$$
+（端点处一般不能保证，需要单独处理。）</p>
+<p><strong>定理 14（Abel 定理）</strong> 若幂级数在收敛端点 <span class="arithmatex">\(x = R\)</span>（或 <span class="arithmatex">\(x = -R\)</span>）处收敛，则和函数在该端点处连续，即极限可以逐项取：<span class="arithmatex">\(\lim_{x \to R^-} \sum a_n x^n = \sum a_n R^n\)</span>。这保证了"在端点代入求和"的合法性（如例 6）。</p>
+<p><strong>例 5</strong> 由几何级数 <span class="arithmatex">\(\dfrac{1}{1 - x} = \sum_{n=0}^{\infty} x^n\)</span>（<span class="arithmatex">\(|x| &lt; 1\)</span>）逐项积分得 <span class="arithmatex">\(-\ln(1 - x) = \sum_{n=1}^{\infty} \dfrac{x^n}{n}\)</span>，即 <span class="arithmatex">\(\ln(1 + x) = \sum_{n=1}^{\infty} \dfrac{(-1)^{n-1} x^n}{n}\)</span>；逐项求导得 <span class="arithmatex">\(\dfrac{1}{(1 - x)^2} = \sum_{n=1}^{\infty} n x^{n-1}\)</span>。可见<strong>和函数可用逐项运算从已知展开推出</strong>，这是幂级数方法的核心技巧。</p>
+<p>类似地，<span class="arithmatex">\(\arctan x\)</span> 的展开可由逐项积分推出：
+$$
+\arctan x = \int_0^x \frac{\mathrm{d}t}{1 + t^2} = \int_0^x \sum_{n=0}^{\infty} (-1)^n t^{2n}\,\mathrm{d}t = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{2n+1} \quad (|x| &lt; 1).
+$$
+先展开、再逐项积分，往往比直接求各阶导数（Maclaurin 公式）省力得多。</p>
+<p><strong>例（级数求和）</strong> 求 <span class="arithmatex">\(\sum_{n=1}^{\infty} \dfrac{n}{2^n}\)</span>。由 <span class="arithmatex">\(\sum_{n=1}^{\infty} n x^{n-1} = \dfrac{1}{(1 - x)^2}\)</span>（<span class="arithmatex">\(|x| &lt; 1\)</span>，见例 5），取 <span class="arithmatex">\(x = 1/2\)</span> 得 <span class="arithmatex">\(\sum_{n=1}^{\infty} \dfrac{n}{2^{n-1}} = 4\)</span>，故原级数和为 <span class="arithmatex">\(2\)</span>。这类"先求和函数、再取特殊值"的技巧把级数求和转化为幂级数运算。</p>
+<p><strong>例（缺项幂级数）</strong> <span class="arithmatex">\(\sum \dfrac{x^{2n}}{n}\)</span> 只含偶次项，令 <span class="arithmatex">\(u = x^2\)</span> 化为 <span class="arithmatex">\(\sum \dfrac{u^n}{n}\)</span>，对 <span class="arithmatex">\(u\)</span> 的收敛半径为 <span class="arithmatex">\(1\)</span>，故对 <span class="arithmatex">\(x\)</span> 的收敛半径也是 <span class="arithmatex">\(1\)</span>，收敛域为 <span class="arithmatex">\((-1, 1)\)</span>（端点处均为调和级数，发散）。缺项幂级数常用这种"换元降次"处理。</p>
+<p><strong>常用幂级数展开</strong>（<span class="arithmatex">\(x_0 = 0\)</span>，收敛区间标出）：</p>
+<div class="arithmatex">\[
+e^x = \sum_{n=0}^{\infty} \frac{x^n}{n!} \quad (-\infty, +\infty), \qquad
+\frac{1}{1 - x} = \sum_{n=0}^{\infty} x^n \quad (-1, 1),
+$$
+$$
+\sin x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!}, \qquad
+\cos x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} \quad (-\infty, +\infty),
+$$
+$$
+\ln(1 + x) = \sum_{n=1}^{\infty} \frac{(-1)^{n-1} x^n}{n}, \qquad
+(1 + x)^\alpha = \sum_{n=0}^{\infty} \binom{\alpha}{n} x^n \quad (-1, 1),
+$$
+$$
+\arctan x = \sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{2n+1} \quad [-1, 1].
+\]</div>
+<p><strong>例 6（<span class="arithmatex">\(\pi/4\)</span> 的级数表示）</strong> 在 <span class="arithmatex">\(\arctan x\)</span> 的展开式中令 <span class="arithmatex">\(x = 1\)</span>（Abel 定理保证端点处取极限合法）得
+$$
+\frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots,
+$$
+圆周率的一个著名级数表示；由交错级数的余项估计 <span class="arithmatex">\(|R_n| \le a_{n+1}\)</span> 可估算取多少项达到所需精度。</p>
+<p>由 Abel 定理在端点 <span class="arithmatex">\(x = 1\)</span> 处取极限，<span class="arithmatex">\(\ln(1 + x)\)</span> 的展开给出 <span class="arithmatex">\(\ln 2 = 1 - \dfrac{1}{2} + \dfrac{1}{3} - \cdots\)</span>，与例 3 呼应；在 <span class="arithmatex">\(x = -\dfrac{1}{2}\)</span> 处取值则给出 <span class="arithmatex">\(\sum_{n=1}^{\infty} \dfrac{1}{n\,2^n} = \ln 2\)</span>——同一个函数在不同点给出不同的级数等式。</p>
+<h2 id="_9">例子<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<ul>
+<li>例 7：判别 <span class="arithmatex">\(\sum \dfrac{n^2}{3^n}\)</span>：<span class="arithmatex">\(\dfrac{a_{n+1}}{a_n} = \dfrac{(n+1)^2 / 3^{n+1}}{n^2 / 3^n} = \dfrac{1}{3} \left( 1 + \dfrac{1}{n} \right)^2 \to \dfrac{1}{3} &lt; 1\)</span>，收敛。</li>
+<li>例 8：判别 <span class="arithmatex">\(\sum \dfrac{1}{\sqrt{n}}\)</span>：与 p-级数比较，<span class="arithmatex">\(p = \dfrac{1}{2} \le 1\)</span>，发散。</li>
+<li>例 9：由 <span class="arithmatex">\(\lim \sqrt[n]{n} = 1 \ne 0\)</span>，级数 <span class="arithmatex">\(\sum \sqrt[n]{n}\)</span> 的一般项不趋于零，发散。</li>
+<li>例 10：判别 <span class="arithmatex">\(\sum \dfrac{n^2}{2^n}\)</span> 可用根值判别法：<span class="arithmatex">\(\sqrt[n]{a_n} = \dfrac{(\sqrt[n]{n})^2}{2} \to \dfrac{1}{2} &lt; 1\)</span>，收敛。</li>
+<li>例 11：<span class="arithmatex">\(\lim_{n \to \infty} (\sqrt{n + 1} - \sqrt{n}) = \lim_{n \to \infty} \dfrac{1}{\sqrt{n + 1} + \sqrt{n}} = 0\)</span>（有理化）。</li>
+<li>例 12：求 <span class="arithmatex">\(S_n = \dfrac{1}{\sqrt{n^2 + 1}} + \cdots + \dfrac{1}{\sqrt{n^2 + n}}\)</span>。共 <span class="arithmatex">\(n\)</span> 项且 <span class="arithmatex">\(\dfrac{n}{\sqrt{n^2 + n}} \le S_n \le \dfrac{n}{\sqrt{n^2 + 1}}\)</span>，两端都趋于 <span class="arithmatex">\(1\)</span>，由夹逼准则 <span class="arithmatex">\(\lim S_n = 1\)</span>。</li>
+<li>例 13：判别 <span class="arithmatex">\(\sum \dfrac{\ln n}{n^2}\)</span>：对充分大的 <span class="arithmatex">\(n\)</span> 有 <span class="arithmatex">\(\ln n &lt; n^{1/2}\)</span>，故 <span class="arithmatex">\(\dfrac{\ln n}{n^2} &lt; \dfrac{1}{n^{3/2}}\)</span>，由比较判别法（<span class="arithmatex">\(p = 3/2 &gt; 1\)</span>）收敛。</li>
+<li>例 14：<span class="arithmatex">\(\sum \dfrac{n^2}{n!}\)</span>：比值 <span class="arithmatex">\(\dfrac{(n+1)^2/(n+1)!}{n^2/n!} = \dfrac{n+1}{n^2} \to 0 &lt; 1\)</span>，收敛。</li>
+<li>例 15：<span class="arithmatex">\(\sum \dfrac{1}{n \ln n}\)</span> 发散：用积分判别法，<span class="arithmatex">\(\int_2^{+\infty} \dfrac{\mathrm{d}x}{x \ln x} = \ln(\ln x) \big|_2^{+\infty} = +\infty\)</span>，而 <span class="arithmatex">\(f(x) = 1/(x \ln x)\)</span> 在 <span class="arithmatex">\([2, +\infty)\)</span> 上单调递减非负。</li>
+<li>例 16：<span class="arithmatex">\(\sum \dfrac{(-1)^{n-1}}{n^2}\)</span> 绝对收敛：绝对值级数为 <span class="arithmatex">\(\sum 1/n^2\)</span>（p-级数，<span class="arithmatex">\(p = 2 &gt; 1\)</span>）收敛。绝对收敛保证它可以任意重排而不改变和。</li>
+<li>例 17：<span class="arithmatex">\(\sum_{n=1}^{\infty} \dfrac{1}{n(n+2)}\)</span>：裂项 <span class="arithmatex">\(\dfrac{1}{n(n+2)} = \dfrac{1}{2}\left( \dfrac{1}{n} - \dfrac{1}{n+2} \right)\)</span>，前后项抵消，和为 <span class="arithmatex">\(\dfrac{1}{2}\left( 1 + \dfrac{1}{2} \right) = \dfrac{3}{4}\)</span>。</li>
+<li>例 18：<span class="arithmatex">\(\sum \left( 2 + \dfrac{(-1)^n}{n} \right) x^n\)</span> 的系数不收敛，比值形式失效，需用 Cauchy–Hadamard 公式：<span class="arithmatex">\(\sqrt[n]{|a_n|} = \sqrt[n]{2 + (-1)^n/n} \to 2\)</span>，故 <span class="arithmatex">\(R = 1/2\)</span>。limsup 形式在处理系数振荡时不可替代。</li>
+<li>例 19：<span class="arithmatex">\(\sum \dfrac{(-1)^{n-1}}{n^p}\)</span>：<span class="arithmatex">\(p &gt; 1\)</span> 时绝对收敛；<span class="arithmatex">\(0 &lt; p \le 1\)</span> 时条件收敛（Leibniz 判别法加 p-级数）。同一族级数清晰展示了绝对收敛与条件收敛的界限。</li>
+<li>例 20：判别 <span class="arithmatex">\(\sum \dfrac{n!}{n^n}\)</span>：比值 <span class="arithmatex">\(\dfrac{(n+1)!/(n+1)^{n+1}}{n!/n^n} = \left( \dfrac{n}{n+1} \right)^n = \dfrac{1}{(1 + 1/n)^n} \to \dfrac{1}{e} &lt; 1\)</span>，收敛——比值极限恰为 <span class="arithmatex">\(1/e\)</span>，与 <span class="arithmatex">\(e\)</span> 的定义呼应。</li>
+<li>例 21：<span class="arithmatex">\(\lim_{n \to \infty} \left( \dfrac{n}{n+1} \right)^n = \dfrac{1}{(1 + 1/n)^n} \to \dfrac{1}{e}\)</span>。</li>
+<li>例 22：判别 <span class="arithmatex">\(\sum \dfrac{3^n}{n!}\)</span>：比值 <span class="arithmatex">\(\dfrac{3^{n+1}/(n+1)!}{3^n/n!} = \dfrac{3}{n+1} \to 0\)</span>，收敛（事实上其和为 <span class="arithmatex">\(e^3 - 1\)</span>）。</li>
+<li>例 23：判别 <span class="arithmatex">\(\sum \left( \dfrac{n}{2n+1} \right)^n\)</span>：根值 <span class="arithmatex">\(\sqrt[n]{a_n} = \dfrac{n}{2n+1} \to \dfrac{1}{2} &lt; 1\)</span>，收敛——<span class="arithmatex">\(n\)</span> 次幂结构用根值判别法最直接。</li>
+<li>例 24：判别 <span class="arithmatex">\(\sum \dfrac{n^n}{(n!)^2}\)</span>：比值 <span class="arithmatex">\(\dfrac{a_{n+1}}{a_n} = \left( 1 + \dfrac{1}{n} \right)^n \cdot \dfrac{1}{n+1} \to 0\)</span>，收敛。</li>
+<li>例 25：<span class="arithmatex">\(\sum_{n=1}^{\infty} \dfrac{1}{3^n} = \dfrac{1/3}{1 - 1/3} = \dfrac{1}{2}\)</span>（几何级数求和）。</li>
+<li>例 26：<span class="arithmatex">\(\sum_{n=0}^{\infty} \dfrac{(-1)^n}{3^n} = \dfrac{1}{1 + 1/3} = \dfrac{3}{4}\)</span>（公比 <span class="arithmatex">\(r = -1/3\)</span> 的几何级数）。</li>
+<li>例 27：求 <span class="arithmatex">\(\sum_{n=1}^{\infty} \dfrac{n}{3^n}\)</span>：对 <span class="arithmatex">\(\sum n x^{n-1} = \dfrac{1}{(1-x)^2}\)</span> 取 <span class="arithmatex">\(x = 1/3\)</span>，得 <span class="arithmatex">\(\sum \dfrac{n}{3^{n-1}} = \dfrac{9}{4}\)</span>，故原和为 <span class="arithmatex">\(\dfrac{9}{4} \cdot \dfrac{1}{3} = \dfrac{3}{4}\)</span>。</li>
+<li>例 28：<span class="arithmatex">\(\sum_{n=0}^{\infty} \dfrac{1}{4^n} = \dfrac{1}{1 - 1/4} = \dfrac{4}{3}\)</span>（几何级数求和）。</li>
+<li>例 29：<span class="arithmatex">\(\sum \dfrac{n^2 + 1}{n^2 + n}\)</span> 发散：一般项 <span class="arithmatex">\(\to 1 \ne 0\)</span>，不满足收敛的必要条件。</li>
+<li>例 30：判别 <span class="arithmatex">\(\sum \dfrac{2^n}{n^2}\)</span>：比值 <span class="arithmatex">\(\dfrac{a_{n+1}}{a_n} = \dfrac{2^{n+1}/(n+1)^2}{2^n/n^2} = 2\left( \dfrac{n}{n+1} \right)^2 \to 2 &gt; 1\)</span>，发散。</li>
+</ul>
+<h2 id="_10">小结<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p>级数理论的逻辑链：<strong>部分和数列 → 收敛定义与必要条件 → 正项级数判别（比较/比值/根值）→ 交错级数（Leibniz 判别法）→ 绝对收敛 → 幂级数与收敛半径 → 和函数（逐项运算）</strong>。判定级数收敛没有单一万能方法，但"先看通项是否趋于零、再分正项与交错、最后化归幂级数"的流程覆盖了绝大多数问题。</p>
+<h2 id="_11">延伸阅读<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../limits/">极限</a>：函数极限与无穷小，与数列极限相互印证。</li>
+<li><a href="../integrals/">积分</a>：积分判别法与广义积分中的条件收敛。</li>
+<li><a href="../../real/">实分析</a>：实数完备性（确界原理）是单调有界定理的基础。</li>
+<li><a href="../../../notation/">符号表</a>：<span class="arithmatex">\(\sum\)</span>、<span class="arithmatex">\(\lim\)</span> 记号约定。</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月20日 16:25:31 UTC">2026年8月20日</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月20日 16:25:31 UTC">2026年8月20日</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../integrals/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 积分">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                积分
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../real/" class="md-footer__link md-footer__link--next" aria-label="下一页: 实分析">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                实分析
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 CHMath-wiki Team &mdash; 采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 协议
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../assets/js/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

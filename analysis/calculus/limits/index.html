@@ -1,0 +1,4368 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="CHMath-wiki：一个旨在通过提供精准、简洁且抓住问题本质的数学内容， 来提升数学理解能力的中文资料库。">
+      
+      
+        <meta name="author" content="CHMath-wiki Team">
+      
+      
+        <link rel="canonical" href="https://finparker.github.io/CHMath-wiki/analysis/calculus/limits/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../derivatives/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>极限 - CHMath-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="CHMath-wiki" class="md-header__button md-logo" aria-label="CHMath-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CHMath-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              极限
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="light-blue"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FinParker/CHMath-wiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CHMath-wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CHMath-wiki" class="md-nav__button md-logo" aria-label="CHMath-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    CHMath-wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FinParker/CHMath-wiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CHMath-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../intro/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    入门
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    入门
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于本项目
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内容路线图
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/contribute/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    贡献指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../intro/writing-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    写作规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    符号表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../foundations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数学基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../foundations/logic/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数理逻辑
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数理逻辑
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/logic/propositional_logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    命题逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/logic/predicate_logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    谓词逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../foundations/set_theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    集合论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    集合论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基本概念
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/operations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    集合运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/relations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/cardinality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基数与势
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/ordinals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    序数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/zfc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ZFC 公理系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/set_theory/axiom_of_choice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    选择公理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../foundations/category_theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    范畴论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    范畴论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/categories/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    范畴
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/morphisms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    态射与同构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/functors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/natural_transformations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自然变换
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/universal_properties/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    泛性质与极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../foundations/category_theory/yoneda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yoneda 引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../algebra/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代数
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    代数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../algebra/structures/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代数结构
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    代数结构
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/algebraic_system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代数系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/semigroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    半群与幺半群
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/group/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    群
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/ring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/field/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/structures/polynomial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    多项式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../algebra/linear/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性代数
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    线性代数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/vector_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    向量空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/linear_maps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性映射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/matrices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    矩阵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/determinants/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行列式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../algebra/linear/eigenvalues/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    特征值与特征向量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微积分
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    微积分
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        函数极限
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="函数极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直觉与 ε-δ 定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        邻域语言
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        左极限与右极限
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自变量趋于无穷
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极限的性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="极限的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极限不存在的判别
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两个重要极限
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无穷小与无穷大
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="连续性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续函数的运算与初等函数的连续性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        闭区间上连续函数的性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        计算极限的一般策略
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例子
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        延伸阅读
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../derivatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    导数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sequences_series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数列与级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../real/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    实分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/real_numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实数公理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/topology_of_r/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    实数的拓扑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    连续函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微分学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../real/integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riemann 积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../complex/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    复分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/complex_numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/holomorphic_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    全纯函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../geometry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    几何
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../topology/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    拓扑学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    拓扑学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/topological_spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    拓扑空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/connectedness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    连通性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../topology/compactness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    紧致性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../number_theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../number_theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    初等数论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../number_theory/primes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    素数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../number_theory/modular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../discrete_mathematics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    离散数学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    离散数学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discrete_mathematics/combinatorics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    组合数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discrete_mathematics/graph_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../discrete_mathematics/automata_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自动机理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../probability_statistics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概率与统计
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    概率与统计
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../probability_statistics/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概率论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../probability_statistics/random_variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    随机变量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applied_math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    应用数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../tricks/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    解题技巧
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_13" id="__nav_13_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    解题技巧
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tricks/factorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶乘
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tricks/partial_fractions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    有理分式的拆分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../elementary/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    初等数学(草稿)
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_14" id="__nav_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    初等数学(草稿)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    集合
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/inequalities/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/number_theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/equations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    等式与方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../elementary/logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简单逻辑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    项目开发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        函数极限
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="函数极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直觉与 ε-δ 定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        邻域语言
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        左极限与右极限
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自变量趋于无穷
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极限的性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="极限的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极限不存在的判别
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两个重要极限
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无穷小与无穷大
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="连续性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续函数的运算与初等函数的连续性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        闭区间上连续函数的性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        计算极限的一般策略
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例子
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        小结
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        延伸阅读
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <a href="../../../tags/#tag:微积分" class="md-tag">微积分</a>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h1 id="_1">极限<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>极限描述"逼近"：自变量趋向某处时函数值趋向何处。它是微积分一切概念的基石。</p>
+</blockquote>
+<h2 id="_2">概述<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>微积分研究变化与累积，而这两者都建立在同一个原始直觉上：<strong>逼近</strong>。当 <span class="arithmatex">\(x\)</span> 越来越接近 <span class="arithmatex">\(a\)</span> 时，<span class="arithmatex">\(f(x)\)</span> 是否越来越接近某个数 <span class="arithmatex">\(L\)</span>？把"越来越接近"从直觉翻译成不等式，就得到极限的定义。数列极限、函数极限、导数、定积分（Riemann 和）本质上是同一种结构的化身；连续性、无穷小、渐近线等概念也全部以极限为出发点。掌握极限，就是掌握"用有限的语言精确描述无限逼近"这一分析学的基本语法。从牛顿、莱布尼茨的直觉使用，到柯西、魏尔斯特拉斯用 ε-δ 语言严格化，极限概念经历了近两个世纪才定型——ε-δ 定义本身就是分析严格化的里程碑。</p>
+<h2 id="_3">函数极限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="-">直觉与 ε-δ 定义<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<p>直觉地说，<span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span> 表示：当 <span class="arithmatex">\(x\)</span> 无限接近 <span class="arithmatex">\(a\)</span>（但 <span class="arithmatex">\(x \ne a\)</span>）时，<span class="arithmatex">\(f(x)\)</span> 无限接近 <span class="arithmatex">\(L\)</span>。ε-δ 语言把"无限接近"精确化为：误差要求可以任意小（<span class="arithmatex">\(\varepsilon\)</span> 任意小），而总能找到足够的接近程度（<span class="arithmatex">\(\delta\)</span>）来满足它。它不回答"要多近才够"，而回答"无论要求多近，都能做到"。</p>
+<p><strong>定义 1（函数极限的 ε-δ 定义）</strong> 设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 的某去心邻域内有定义。若对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在 <span class="arithmatex">\(\delta &gt; 0\)</span>，使得当 <span class="arithmatex">\(0 &lt; |x - a| &lt; \delta\)</span> 时成立
+$$
+|f(x) - L| &lt; \varepsilon,
+$$
+则称 <span class="arithmatex">\(x \to a\)</span> 时 <span class="arithmatex">\(f(x)\)</span> 收敛于 <span class="arithmatex">\(L\)</span>，记作 <span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span>。</p>
+<div class="admonition note">
+<p class="admonition-title">要点</p>
+<p>条件 <span class="arithmatex">\(0 &lt; |x - a|\)</span> 强调 <span class="arithmatex">\(x \ne a\)</span>：极限只关心 <span class="arithmatex">\(a\)</span> <strong>附近</strong>的行为，与 <span class="arithmatex">\(f(a)\)</span> 是否存在、等于多少<strong>无关</strong>。这一"去心"设计正是连续性（要求 <span class="arithmatex">\(f(a)\)</span> 参与）与极限（不要求）的差别所在。</p>
+</div>
+<p><strong>例 1（线性函数）</strong> 证明 <span class="arithmatex">\(\lim_{x \to 2} (3x - 1) = 5\)</span>。对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，取 <span class="arithmatex">\(\delta = \varepsilon / 3\)</span>，则当 <span class="arithmatex">\(0 &lt; |x - 2| &lt; \delta\)</span> 时，<span class="arithmatex">\(|(3x - 1) - 5| = 3|x - 2| &lt; \varepsilon\)</span>。</p>
+<p><strong>例 2（分段函数）</strong> 设
+$$
+f(x) = \begin{cases} x + 1, &amp; x \ne 1, \ 0, &amp; x = 1. \end{cases}
+$$
+虽然 <span class="arithmatex">\(f(1) = 0\)</span>，但 <span class="arithmatex">\(\lim_{x \to 1} f(x) = 2\)</span>——极限无视 <span class="arithmatex">\(x = 1\)</span> 处的取值。</p>
+<p><strong>ε-δ 证明的常用技巧</strong>：先用 <span class="arithmatex">\(|f(x) - L|\)</span> 的代数变形把误差放缩成 <span class="arithmatex">\(C|x - a|\)</span> 的形式（<span class="arithmatex">\(C\)</span> 为常数），再取 <span class="arithmatex">\(\delta = \varepsilon / C\)</span>；若放缩中出现"额外因子"（如 <span class="arithmatex">\(|x + 3|\)</span>），可先限定 <span class="arithmatex">\(|x - a| &lt; 1\)</span> 把它控制住，再取 <span class="arithmatex">\(\delta = \min\{1, \varepsilon/C\}\)</span>。</p>
+<h3 id="_4">邻域语言<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><strong>定义 1 的等价形式（邻域语言）</strong> <span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span> 等价于：对 <span class="arithmatex">\(L\)</span> 的任意 <span class="arithmatex">\(\varepsilon\)</span>-邻域 <span class="arithmatex">\((L - \varepsilon, L + \varepsilon)\)</span>，都存在 <span class="arithmatex">\(a\)</span> 的 <span class="arithmatex">\(\delta\)</span>-去心邻域 <span class="arithmatex">\((a - \delta, a) \cup (a, a + \delta)\)</span>，使得 <span class="arithmatex">\(f\)</span> 把后者映入前者。用"集合被包含"表述极限，便于把极限概念推广到度量空间乃至拓扑空间（见<a href="../../real/">实分析</a>）。</p>
+<p><strong>例 3（有理化）</strong> 求 <span class="arithmatex">\(\lim_{x \to 0} \dfrac{\sqrt{1 + x} - 1}{x}\)</span>。分子有理化：
+$$
+\frac{\sqrt{1 + x} - 1}{x} = \frac{1}{\sqrt{1 + x} + 1} \to \frac{1}{2} \quad (x \to 0).
+$$
+有理化是处理根号差的基本手段：把"不能直接代入"化为"可以直接代入"。</p>
+<h3 id="_5">左极限与右极限<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><strong>定义 2（单侧极限）</strong> 在定义 1 中若把 <span class="arithmatex">\(x\)</span> 限制在 <span class="arithmatex">\(a\)</span> 的左侧（<span class="arithmatex">\(0 &lt; a - x &lt; \delta\)</span>），得到的极限称为左极限，记 <span class="arithmatex">\(\lim_{x \to a^-} f(x)\)</span>；限制在右侧（<span class="arithmatex">\(0 &lt; x - a &lt; \delta\)</span>）则为右极限，记 <span class="arithmatex">\(\lim_{x \to a^+} f(x)\)</span>。</p>
+<p><strong>定理 1（极限存在与单侧极限）</strong> <span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span> 当且仅当左、右极限都存在且相等：
+$$
+\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x) = L.
+$$</p>
+<p>分段函数在分段点、绝对值函数在零点处的极限问题，通常先化归为单侧极限。</p>
+<p><strong>例 4</strong> <span class="arithmatex">\(f(x) = |x|/x\)</span>（<span class="arithmatex">\(x \ne 0\)</span>）在 <span class="arithmatex">\(x \to 0\)</span> 时左极限为 <span class="arithmatex">\(-1\)</span>、右极限为 <span class="arithmatex">\(1\)</span>，故 <span class="arithmatex">\(\lim_{x \to 0} f(x)\)</span> 不存在。</p>
+<h3 id="_6">自变量趋于无穷<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p><strong>定义 3（无穷远处的极限）</strong> 若对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span> 存在 <span class="arithmatex">\(X &gt; 0\)</span>，使得当 <span class="arithmatex">\(x &gt; X\)</span> 时 <span class="arithmatex">\(|f(x) - L| &lt; \varepsilon\)</span>，则记 <span class="arithmatex">\(\lim_{x \to +\infty} f(x) = L\)</span>；<span class="arithmatex">\(x \to -\infty\)</span> 情形类似。数列极限是这一情形的离散版本，见<a href="../sequences_series/">数列与级数</a>。</p>
+<p><strong>例 5（抓大头）</strong> <span class="arithmatex">\(\lim_{x \to \infty} \dfrac{2x^2 + 1}{3x^2 - x} = \lim_{x \to \infty} \dfrac{2 + 1/x^2}{3 - 1/x} = \dfrac{2}{3}\)</span>：分子分母同除最高次幂，是处理"<span class="arithmatex">\(\infty/\infty\)</span>"型的标准手法。</p>
+<h2 id="_7">极限的性质<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><strong>定理 2（唯一性）</strong> 若 <span class="arithmatex">\(\lim_{x \to a} f(x)\)</span> 存在，则极限唯一。</p>
+<p><strong>定理 3（局部有界性）</strong> 若 <span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span>，则存在 <span class="arithmatex">\(\delta &gt; 0\)</span> 与 <span class="arithmatex">\(M &gt; 0\)</span>，使当 <span class="arithmatex">\(0 &lt; |x - a| &lt; \delta\)</span> 时 <span class="arithmatex">\(|f(x)| \le M\)</span>。</p>
+<p><strong>定理 4（四则运算法则）</strong> 设 <span class="arithmatex">\(\lim_{x \to a} f(x) = A\)</span>、<span class="arithmatex">\(\lim_{x \to a} g(x) = B\)</span>，则
+$$
+\lim_{x \to a} [f(x) \pm g(x)] = A \pm B, \qquad
+\lim_{x \to a} [f(x)g(x)] = AB,
+$$
+且当 <span class="arithmatex">\(B \ne 0\)</span> 时 <span class="arithmatex">\(\lim_{x \to a} \dfrac{f(x)}{g(x)} = \dfrac{A}{B}\)</span>。</p>
+<p><strong>定理 5（保序性）</strong> 若在 <span class="arithmatex">\(a\)</span> 的某去心邻域内 <span class="arithmatex">\(f(x) \le g(x)\)</span>，且两个极限都存在，则 <span class="arithmatex">\(\lim f \le \lim g\)</span>。<strong>推论（保号性）</strong>：若 <span class="arithmatex">\(\lim_{x \to a} f(x) = A &gt; 0\)</span>，则在 <span class="arithmatex">\(a\)</span> 的某去心邻域内 <span class="arithmatex">\(f(x) &gt; 0\)</span>。保号性常用来判断极限的符号与函数值的符号如何相互传递。</p>
+<div class="admonition warning">
+<p class="admonition-title">易错点</p>
+<p>若在去心邻域内 <span class="arithmatex">\(f(x) &lt; g(x)\)</span>（严格不等）且两极限存在，只能推出 <span class="arithmatex">\(\lim f \le \lim g\)</span>，等号可能成立。例如 <span class="arithmatex">\(0 &lt; x^2\)</span>（<span class="arithmatex">\(x \ne 0\)</span>），但 <span class="arithmatex">\(\lim_{x \to 0} 0 = \lim_{x \to 0} x^2 = 0\)</span>。严格不等式取极限后可能退化为非严格不等式。</p>
+</div>
+<p><strong>定理 6（复合函数的极限）</strong> 若 <span class="arithmatex">\(\lim_{x \to a} g(x) = u_0\)</span>，<span class="arithmatex">\(\lim_{u \to u_0} f(u) = L\)</span>，且 <span class="arithmatex">\(g\)</span> 在 <span class="arithmatex">\(a\)</span> 的去心邻域内不恒等于 <span class="arithmatex">\(u_0\)</span>，则
+$$
+\lim_{x \to a} f(g(x)) = L.
+$$
+条件"<span class="arithmatex">\(g(x) \ne u_0\)</span>"是为了防止内层函数在 <span class="arithmatex">\(a\)</span> 附近"卡"在 <span class="arithmatex">\(u_0\)</span> 上而破坏外层极限的去心性。复合极限是"换元求极限"合法性的依据。</p>
+<p><strong>定理 7（夹逼准则）</strong> 设在 <span class="arithmatex">\(a\)</span> 的某去心邻域内 <span class="arithmatex">\(g(x) \le f(x) \le h(x)\)</span>，且 <span class="arithmatex">\(\lim_{x \to a} g(x) = \lim_{x \to a} h(x) = L\)</span>，则 <span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span>。</p>
+<p>夹逼准则的价值在于：难以直接求极限的函数，可以用两个"夹住"它且极限易求的函数来定界。</p>
+<p><strong>定理 8（归结原则，Heine 定理）</strong> <span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span> 当且仅当对任意满足 <span class="arithmatex">\(x_n \to a\)</span>（<span class="arithmatex">\(x_n \ne a\)</span>）的数列，都有 <span class="arithmatex">\(f(x_n) \to L\)</span>。这给出了数列极限与函数极限之间的桥梁，也是证明"函数极限不存在"的常用工具——取两个不同的趋近方式得到不同结果即可。</p>
+<h3 id="_8">极限不存在的判别<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><strong>例 6（用归结原则判定不存在）</strong> 证明 <span class="arithmatex">\(\lim_{x \to 0} \sin \dfrac{1}{x}\)</span> 不存在。取 <span class="arithmatex">\(x_n = \dfrac{1}{n\pi}\)</span>，则 <span class="arithmatex">\(\sin(1/x_n) = 0 \to 0\)</span>；再取 <span class="arithmatex">\(y_n = \dfrac{1}{2n\pi + \pi/2}\)</span>，则 <span class="arithmatex">\(\sin(1/y_n) = 1 \to 1\)</span>。两条都趋于 <span class="arithmatex">\(0\)</span> 的路径给出不同极限，由归结原则，极限不存在。</p>
+<p>极限不存在的常见情形：</p>
+<ul>
+<li><strong>左右极限不等</strong>（跳跃型），如 <span class="arithmatex">\(|x|/x\)</span> 在 <span class="arithmatex">\(0\)</span> 处；</li>
+<li><strong>趋于无穷</strong>：<span class="arithmatex">\(\lim_{x \to 0} \dfrac{1}{x^2} = +\infty\)</span>，极限不存在（有时记为"趋于无穷"）；</li>
+<li><strong>振荡不收敛</strong>：<span class="arithmatex">\(\sin(1/x)\)</span> 在 <span class="arithmatex">\(0\)</span> 处、<span class="arithmatex">\(\sin x\)</span> 在 <span class="arithmatex">\(\infty\)</span> 处。</li>
+</ul>
+<h2 id="_9">两个重要极限<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p><strong>定理 9（<span class="arithmatex">\(\sin x / x\)</span>）</strong> <span class="arithmatex">\(\displaystyle \lim_{x \to 0} \frac{\sin x}{x} = 1\)</span>。</p>
+<p><strong>证明（思想）</strong> 在单位圆内取角 <span class="arithmatex">\(x \in (0, \pi/2)\)</span>，比较三角形与扇形面积可得 <span class="arithmatex">\(\sin x &lt; x &lt; \tan x\)</span>，变形后得到 <span class="arithmatex">\(\cos x &lt; \dfrac{\sin x}{x} &lt; 1\)</span>；由夹逼准则及 <span class="arithmatex">\(\cos x \to 1\)</span>（<span class="arithmatex">\(x \to 0\)</span>）即得。这里的关键是<strong>面积比较</strong>：用几何把 <span class="arithmatex">\(\sin x / x\)</span> 夹在已知极限之间。这也是"重要极限"之所以重要——大量三角函数的极限都要化归到它。</p>
+<p>由定理 9 立得 <span class="arithmatex">\(\lim_{x \to 0} \dfrac{\tan x}{x} = 1\)</span>、<span class="arithmatex">\(\lim_{x \to 0} \dfrac{\arcsin x}{x} = 1\)</span> 等常用结论；结合 <span class="arithmatex">\(\cos x\)</span> 的恒等变形还有 <span class="arithmatex">\(\lim_{x \to 0} \dfrac{1 - \cos x}{x^2} = \dfrac{1}{2}\)</span>。它们正是等价关系 <span class="arithmatex">\(\sin x \sim x\)</span>、<span class="arithmatex">\(\tan x \sim x\)</span>、<span class="arithmatex">\(1 - \cos x \sim \dfrac{x^2}{2}\)</span> 的来源。</p>
+<p><strong>例（重要极限的变体）</strong> <span class="arithmatex">\(\lim_{x \to 0} \dfrac{\sin 2x}{\sin 3x} = \lim_{x \to 0} \dfrac{2x}{3x} = \dfrac{2}{3}\)</span>——分子分母都是与 <span class="arithmatex">\(x\)</span> 等价的无穷小，直接替换即可；更一般地，<span class="arithmatex">\(\lim_{x \to 0} \dfrac{\sin \alpha x}{\sin \beta x} = \dfrac{\alpha}{\beta}\)</span>（<span class="arithmatex">\(\beta \ne 0\)</span>）。</p>
+<p><strong>定理 10（<span class="arithmatex">\((1 + 1/x)^x\)</span>）</strong> <span class="arithmatex">\(\displaystyle \lim_{x \to +\infty} \left( 1 + \frac{1}{x} \right)^x = e\)</span>。这里 <span class="arithmatex">\(e\)</span> 是自然对数的底，由数列极限 <span class="arithmatex">\(e = \lim_{n \to \infty} (1 + 1/n)^n\)</span> 定义（见<a href="../sequences_series/">数列与级数</a>）；实数情形通过对 <span class="arithmatex">\(x\)</span> 取整、用夹逼准则从数列情形推出。</p>
+<div class="admonition warning">
+<p class="admonition-title">易错点</p>
+<p><span class="arithmatex">\(\lim_{x \to 0} \dfrac{\sin x}{x} = 1\)</span> 的前提是 <span class="arithmatex">\(x \to 0\)</span>；若 <span class="arithmatex">\(x \to \infty\)</span>，则 <span class="arithmatex">\(\dfrac{\sin x}{x} \to 0\)</span>（有界量乘以无穷小）。形如 <span class="arithmatex">\((1 + \text{无穷小})^{1/\text{无穷小}}\)</span> 的极限应化为 <span class="arithmatex">\(\left(1 + \frac{1}{t}\right)^t\)</span> 的标准形式，例如 <span class="arithmatex">\(\lim_{x \to 0} (1 + x)^{1/x} = e\)</span>。</p>
+</div>
+<h2 id="_10">无穷小与无穷大<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<p><strong>定义 4（无穷小）</strong> 若 <span class="arithmatex">\(\lim_{x \to a} \alpha(x) = 0\)</span>，则称 <span class="arithmatex">\(\alpha\)</span> 为 <span class="arithmatex">\(x \to a\)</span> 时的无穷小。<span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span> 等价于 <span class="arithmatex">\(f(x) - L\)</span> 是无穷小。</p>
+<p><strong>无穷小的运算</strong>：有限个无穷小之和、之积仍是无穷小；<strong>有界函数与无穷小之积是无穷小</strong>。由后者立得 <span class="arithmatex">\(\lim_{x \to 0} x \sin \dfrac{1}{x} = 0\)</span>（<span class="arithmatex">\(\sin(1/x)\)</span> 有界但无极限，可见"有界"是本质条件）。无穷大没有相应的四则运算，需化归为无穷小处理。</p>
+<p><strong>定义 5（无穷小的阶）</strong> 设 <span class="arithmatex">\(\alpha, \beta\)</span> 为 <span class="arithmatex">\(x \to a\)</span> 时的无穷小，且 <span class="arithmatex">\(\beta\)</span> 在去心邻域内非零：</p>
+<ul>
+<li>若 <span class="arithmatex">\(\lim \dfrac{\alpha}{\beta} = 0\)</span>，则 <span class="arithmatex">\(\alpha\)</span> 是比 <span class="arithmatex">\(\beta\)</span> <strong>高阶</strong>的无穷小，记 <span class="arithmatex">\(\alpha = o(\beta)\)</span>；</li>
+<li>若 <span class="arithmatex">\(\lim \dfrac{\alpha}{\beta} = c \ne 0\)</span>，则 <span class="arithmatex">\(\alpha, \beta\)</span> <strong>同阶</strong>；</li>
+<li>特别地，若 <span class="arithmatex">\(c = 1\)</span>，则称 <span class="arithmatex">\(\alpha, \beta\)</span> <strong>等价</strong>，记 <span class="arithmatex">\(\alpha \sim \beta\)</span>。</li>
+</ul>
+<p><strong>定理 11（等价无穷小替换）</strong> 若 <span class="arithmatex">\(\alpha \sim \alpha'\)</span>、<span class="arithmatex">\(\beta \sim \beta'\)</span>，且 <span class="arithmatex">\(\lim \alpha'/\beta'\)</span> 存在，则
+$$
+\lim \frac{\alpha}{\beta} = \lim \frac{\alpha'}{\beta'}.
+$$
+即求积或商的极限时，因子可以替换为等价无穷小。替换的本质是"忽略高阶项"：<span class="arithmatex">\(\alpha \sim \beta\)</span> 等价于 <span class="arithmatex">\(\alpha = \beta + o(\beta)\)</span>（相差一个高阶无穷小），在乘积中换掉 <span class="arithmatex">\(\alpha\)</span> 引入的误差是 <span class="arithmatex">\(o(\beta)\)</span> 量级，只要商的极限存在就不改变结果——这正是定理 11 成立的机理。</p>
+<p>常用等价无穷小（<span class="arithmatex">\(x \to 0\)</span>）：</p>
+<table>
+<thead>
+<tr>
+<th>无穷小</th>
+<th>等价</th>
+<th>无穷小</th>
+<th>等价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\sin x\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+<td><span class="arithmatex">\(\ln(1 + x)\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\tan x\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+<td><span class="arithmatex">\(e^x - 1\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\arcsin x\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+<td><span class="arithmatex">\(1 - \cos x\)</span></td>
+<td><span class="arithmatex">\(\dfrac{x^2}{2}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\arctan x\)</span></td>
+<td><span class="arithmatex">\(x\)</span></td>
+<td><span class="arithmatex">\((1 + x)^\alpha - 1\)</span></td>
+<td><span class="arithmatex">\(\alpha x\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">易错点</p>
+<p>等价替换只适用于<strong>乘除因子</strong>；对加减项直接替换会得到错误结果（例如 <span class="arithmatex">\(\lim_{x \to 0} \dfrac{\tan x - \sin x}{x^3}\)</span> 不能把分子两项分别换成 <span class="arithmatex">\(x\)</span>）。此时应先做恒等变形（提取公因式、通分、有理化），化为可替换的形式。</p>
+</div>
+<p><strong>无穷大</strong>：若 <span class="arithmatex">\(\lim_{x \to a} |f(x)| = +\infty\)</span>，则称 <span class="arithmatex">\(f\)</span> 为 <span class="arithmatex">\(x \to a\)</span> 时的无穷大。非零无穷小的倒数是无穷大，反之亦然。无穷大也分阶，<span class="arithmatex">\(x \to +\infty\)</span> 时常见无穷大的增长速度排序为
+$$
+\ln x \ll x^\alpha \ll e^x \ll x^x \quad (\alpha &gt; 0),
+$$
+即对数增长最慢、幂函数居中、指数更快、幂指最快（<span class="arithmatex">\(a \ll b\)</span> 表示 <span class="arithmatex">\(a/b \to 0\)</span>）。例如 <span class="arithmatex">\(\lim_{x \to +\infty} \dfrac{\ln x}{x} = 0\)</span> 可用 L'Hôpital 法则证明（见<a href="../derivatives/">导数</a>），它也是数列极限 <span class="arithmatex">\(\ln n / n \to 0\)</span> 的来源（见<a href="../sequences_series/">数列与级数</a>）。</p>
+<h2 id="_11">连续性<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p><strong>定义 6（连续）</strong> 设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 的某邻域内有定义。若 <span class="arithmatex">\(\lim_{x \to a} f(x) = f(a)\)</span>，则称 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 处连续。若 <span class="arithmatex">\(f\)</span> 在区间上每一点连续，则称 <span class="arithmatex">\(f\)</span> 在该区间上连续。</p>
+<p>连续性的等价刻画：自变量增量趋于零时，函数增量也趋于零，即 <span class="arithmatex">\(\lim_{\Delta x \to 0} [f(a + \Delta x) - f(a)] = 0\)</span>——自变量的微小变化只引起函数值的微小变化。</p>
+<p><strong>左右连续</strong>：<span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 处连续当且仅当 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 处既左连续又右连续（单侧极限等于函数值）。左、右极限存在但不相等的情形（跳跃间断点）是"只连续了一半"的典型。</p>
+<p>由四则运算法则，连续函数的四则运算（分母非零处）仍连续；由复合极限，连续函数的复合仍连续。由此可证明一切初等函数在其定义域内连续——这是"初等函数求极限 = 代入求值"的依据。连续版本的保号性（若 <span class="arithmatex">\(f(a) &gt; 0\)</span>，则在 <span class="arithmatex">\(a\)</span> 的某邻域内 <span class="arithmatex">\(f(x) &gt; 0\)</span>）是后续极值定理等证明的基础。</p>
+<p><strong>定义 7（间断点）</strong> 若 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 处不连续，则 <span class="arithmatex">\(a\)</span> 称为间断点，按性质分为三类：</p>
+<ul>
+<li><strong>可去间断点</strong>：<span class="arithmatex">\(\lim_{x \to a} f(x)\)</span> 存在但不等于 <span class="arithmatex">\(f(a)\)</span>（或 <span class="arithmatex">\(f(a)\)</span> 无定义）。重新定义 <span class="arithmatex">\(f(a)\)</span> 即可"修好"间断，如例 2 中的 <span class="arithmatex">\(x = 1\)</span>；</li>
+<li><strong>跳跃间断点</strong>：左、右极限存在但不相等，如 <span class="arithmatex">\(|x|/x\)</span> 在 <span class="arithmatex">\(0\)</span> 处；</li>
+<li><strong>第二类间断点</strong>：至少一侧极限不存在（趋于无穷或振荡），如 <span class="arithmatex">\(\sin(1/x)\)</span> 在 <span class="arithmatex">\(0\)</span> 处振荡、<span class="arithmatex">\(1/x\)</span> 在 <span class="arithmatex">\(0\)</span> 处趋于无穷。</li>
+</ul>
+<p>前两类统称<strong>第一类间断点</strong>，其特点是左、右极限都存在。</p>
+<p><strong>例（判定间断点类型）</strong> <span class="arithmatex">\(f(x) = \dfrac{x^2 - 1}{x - 1}\)</span> 在 <span class="arithmatex">\(x = 1\)</span> 处无定义，但 <span class="arithmatex">\(\lim_{x \to 1} f(x) = \lim_{x \to 1} (x + 1) = 2\)</span>，故 <span class="arithmatex">\(x = 1\)</span> 是可去间断点；<span class="arithmatex">\(g(x) = \tan x\)</span> 在 <span class="arithmatex">\(x = \pi/2\)</span> 处趋于无穷，是第二类间断点；<span class="arithmatex">\(h(x) = \dfrac{1}{x}\)</span> 在 <span class="arithmatex">\(x = 0\)</span> 处同样是第二类间断点。</p>
+<h3 id="_12">连续函数的运算与初等函数的连续性<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p><strong>定理 12（连续函数的运算）</strong> 若 <span class="arithmatex">\(f, g\)</span> 在 <span class="arithmatex">\(a\)</span> 处连续，则 <span class="arithmatex">\(f \pm g\)</span>、<span class="arithmatex">\(fg\)</span> 在 <span class="arithmatex">\(a\)</span> 处连续；当 <span class="arithmatex">\(g(a) \ne 0\)</span> 时 <span class="arithmatex">\(f/g\)</span> 在 <span class="arithmatex">\(a\)</span> 处连续；若 <span class="arithmatex">\(g\)</span> 在 <span class="arithmatex">\(a\)</span> 处连续、<span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(g(a)\)</span> 处连续，则复合函数 <span class="arithmatex">\(f \circ g\)</span> 在 <span class="arithmatex">\(a\)</span> 处连续。</p>
+<p><strong>推论 1（初等函数的连续性）</strong> 幂函数、指数函数、对数函数、三角函数与反三角函数，经有限次四则运算和复合得到的<strong>初等函数</strong>，在其定义域内的每一点连续。实用价值：求 <span class="arithmatex">\(\lim_{x \to a} f(x)\)</span> 时，只要 <span class="arithmatex">\(a\)</span> 在 <span class="arithmatex">\(f\)</span> 的定义域内，就可以直接代入——极限值等于函数值。例如 <span class="arithmatex">\(\lim_{x \to \pi/4} \dfrac{\sin x}{x} = \dfrac{\sin(\pi/4)}{\pi/4} = \dfrac{2\sqrt{2}}{\pi}\)</span>。</p>
+<h2 id="_13">闭区间上连续函数的性质<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><strong>定理 12（最值定理）</strong> 若 <span class="arithmatex">\(f\)</span> 在闭区间 <span class="arithmatex">\([a, b]\)</span> 上连续，则 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([a, b]\)</span> 上有界，且能取到最大值与最小值。</p>
+<p><strong>定理 13（介值定理）</strong> 若 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([a, b]\)</span> 上连续，则 <span class="arithmatex">\(f\)</span> 取遍 <span class="arithmatex">\(f(a)\)</span> 与 <span class="arithmatex">\(f(b)\)</span> 之间的一切值：对任意介于 <span class="arithmatex">\(f(a)\)</span> 与 <span class="arithmatex">\(f(b)\)</span> 之间的数 <span class="arithmatex">\(c\)</span>，存在 <span class="arithmatex">\(\xi \in [a, b]\)</span> 使 <span class="arithmatex">\(f(\xi) = c\)</span>。</p>
+<p><strong>推论 2（零点定理）</strong> 若 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([a, b]\)</span> 上连续且 <span class="arithmatex">\(f(a)f(b) &lt; 0\)</span>，则存在 <span class="arithmatex">\(\xi \in (a, b)\)</span> 使 <span class="arithmatex">\(f(\xi) = 0\)</span>。</p>
+<p><strong>证明（思想，介值定理）</strong> 不妨设 <span class="arithmatex">\(f(a) &lt; c &lt; f(b)\)</span>，令 <span class="arithmatex">\(g = f - c\)</span>，则 <span class="arithmatex">\(g(a) &lt; 0 &lt; g(b)\)</span>。由<strong>确界原理</strong>（见<a href="../../real/">实分析</a>），集合 <span class="arithmatex">\(E = \{x \in [a,b] : g(x) &lt; 0\}\)</span> 有上确界 <span class="arithmatex">\(\xi\)</span>；用连续性验证 <span class="arithmatex">\(g(\xi) = 0\)</span>：若 <span class="arithmatex">\(g(\xi) &lt; 0\)</span>，则 <span class="arithmatex">\(\xi\)</span> 右侧附近仍有 <span class="arithmatex">\(g &lt; 0\)</span>，与上确界矛盾；若 <span class="arithmatex">\(g(\xi) &gt; 0\)</span>，则 <span class="arithmatex">\(\xi\)</span> 左侧附近 <span class="arithmatex">\(g &gt; 0\)</span>，也与上确界矛盾。最值定理的严格证明依赖 Bolzano–Weierstrass 定理（有界数列有收敛子列），本质仍是实数完备性。</p>
+<p><strong>定理 14（一致连续性定理）</strong> 若 <span class="arithmatex">\(f\)</span> 在闭区间 <span class="arithmatex">\([a, b]\)</span> 上连续，则 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([a, b]\)</span> 上<strong>一致连续</strong>：对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，存在只依赖于 <span class="arithmatex">\(\varepsilon\)</span> 的 <span class="arithmatex">\(\delta &gt; 0\)</span>，使得区间内任意满足 <span class="arithmatex">\(|x_1 - x_2| &lt; \delta\)</span> 的两点都有 <span class="arithmatex">\(|f(x_1) - f(x_2)| &lt; \varepsilon\)</span>。与普通连续性的区别在于：<span class="arithmatex">\(\delta\)</span> 不随点 <span class="arithmatex">\(x\)</span> 移动而变，是全区间统一的"步长"。开区间上连续不一定一致连续（如 <span class="arithmatex">\(1/x\)</span> 在 <span class="arithmatex">\((0, 1)\)</span> 上）；<span class="arithmatex">\(f(x) = x^2\)</span> 在 <span class="arithmatex">\(\mathbb{R}\)</span> 上不一致连续，但在任意闭区间上一致连续——"闭区间 + 连续"是保证一致连续的充分条件。</p>
+<div class="admonition note">
+<p class="admonition-title">要点</p>
+<p>直观上，连续函数的图像是"一笔画"的曲线，从 <span class="arithmatex">\(f(a) &lt; 0\)</span> 到 <span class="arithmatex">\(f(b) &gt; 0\)</span> 必穿过 <span class="arithmatex">\(x\)</span> 轴。闭区间与连续性两个条件缺一不可：<span class="arithmatex">\((0, 1)\)</span> 上 <span class="arithmatex">\(f(x) = x\)</span> 连续但取不到最值；<span class="arithmatex">\([0, 1]\)</span> 上分段函数 <span class="arithmatex">\(f(x) = -1\)</span>（<span class="arithmatex">\(x \le 1/2\)</span>）、<span class="arithmatex">\(1\)</span>（<span class="arithmatex">\(x &gt; 1/2\)</span>）满足 <span class="arithmatex">\(f(0)f(1) &lt; 0\)</span> 却无零点，因为它在 <span class="arithmatex">\(1/2\)</span> 处不连续。</p>
+</div>
+<h2 id="_14">计算极限的一般策略<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>先代值</strong>：若 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(a\)</span> 处连续，直接代入（初等函数在其定义域内连续）。</li>
+<li><strong>识别不定式</strong>：<span class="arithmatex">\(\dfrac{0}{0}\)</span>、<span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span>、<span class="arithmatex">\(\infty - \infty\)</span>、<span class="arithmatex">\(0 \cdot \infty\)</span>、<span class="arithmatex">\(1^\infty\)</span> 等，先作变形——通分、有理化、提取公因式、分子分母同除最高次幂。</li>
+<li><strong>选用工具</strong>：等价无穷小替换（只用于乘除因子）、两个重要极限、夹逼准则，必要时用 L'Hôpital 法则（见<a href="../derivatives/">导数</a>）。</li>
+<li><strong>验证结果</strong>：用保号性检查符号、用数值试验检查量级，看结果是否合理。</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">要点</p>
+<p>求极限没有万能公式，但绝大多数题目都落在"变形 + 三大工具（等价替换、重要极限、L'Hôpital）"的框架内。先化简，再选工具；不要在未化简的表达式上盲目套公式。</p>
+</div>
+<h2 id="_15">例子<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<ul>
+<li>例 7：<span class="arithmatex">\(\lim_{x \to 0} \dfrac{\sin 3x}{x} = 3\)</span>（凑 <span class="arithmatex">\(\dfrac{\sin 3x}{3x} \to 1\)</span>）。</li>
+<li>例 8：<span class="arithmatex">\(\lim_{x \to \infty} \left( 1 + \dfrac{2}{x} \right)^x = \left[ \left( 1 + \dfrac{1}{x/2} \right)^{x/2} \right]^2 = e^2\)</span>。</li>
+<li>例 9：<span class="arithmatex">\(\lim_{x \to 0} \dfrac{1 - \cos x}{x^2} = \dfrac{1}{2}\)</span>（替换 <span class="arithmatex">\(1 - \cos x \sim \dfrac{x^2}{2}\)</span>）。</li>
+<li>例 10：<span class="arithmatex">\(\lim_{x \to 0} x \sin \dfrac{1}{x} = 0\)</span>（有界函数与无穷小之积）。</li>
+<li>例 11：<span class="arithmatex">\(\lim_{x \to 0} \dfrac{\ln(1 + x)}{x} = 1\)</span>（等价 <span class="arithmatex">\(\ln(1 + x) \sim x\)</span>）。</li>
+<li>例 12：<span class="arithmatex">\(\lim_{x \to 0} \dfrac{\tan x - \sin x}{x^3}\)</span>。加减项不能直接替换，先提取公因式：
+  $$
+  \frac{\tan x - \sin x}{x^3} = \frac{\sin x (1 - \cos x)}{x^3 \cos x} \sim \frac{x \cdot x<sup>2/2}{x</sup>3} = \frac{1}{2},
+  $$
+  其中最后一步用到等价替换与 <span class="arithmatex">\(\cos x \to 1\)</span>。</li>
+<li>例 13：方程 <span class="arithmatex">\(x^3 - x - 1 = 0\)</span> 在 <span class="arithmatex">\((1, 2)\)</span> 内有根：令 <span class="arithmatex">\(f(x) = x^3 - x - 1\)</span>，则 <span class="arithmatex">\(f(1) = -1 &lt; 0\)</span>、<span class="arithmatex">\(f(2) = 5 &gt; 0\)</span>，由零点定理即得。</li>
+<li>例 14：<span class="arithmatex">\(\lim_{x \to 0} (1 + x)^{1/x} = e\)</span>（重要极限的 <span class="arithmatex">\(x \to 0\)</span> 形式）。</li>
+<li>例 15：<span class="arithmatex">\(\lim_{x \to \infty} \dfrac{[x]}{x} = 1\)</span>，其中 <span class="arithmatex">\([x]\)</span> 为取整函数。由 <span class="arithmatex">\(x - 1 &lt; [x] \le x\)</span> 及夹逼准则，<span class="arithmatex">\(\dfrac{x-1}{x} \le \dfrac{[x]}{x} \le 1\)</span>，两端都趋于 <span class="arithmatex">\(1\)</span>。</li>
+<li>例 16：方程 <span class="arithmatex">\(x = \cos x\)</span> 在 <span class="arithmatex">\((0, 1)\)</span> 内有解：令 <span class="arithmatex">\(f(x) = x - \cos x\)</span>，则 <span class="arithmatex">\(f(0) = -1 &lt; 0\)</span>、<span class="arithmatex">\(f(1) = 1 - \cos 1 &gt; 0\)</span>，由零点定理即得。</li>
+<li>例 17：<span class="arithmatex">\(\lim_{x \to 0} \dfrac{e^x - 1}{x} = 1\)</span>（<span class="arithmatex">\(e^x - 1 \sim x\)</span>；严格证明依赖 <span class="arithmatex">\(e\)</span> 的定义或 Taylor 展开，见<a href="../derivatives/">导数</a>）。</li>
+<li>例 18：设 <span class="arithmatex">\(f(x) = \begin{cases} x \sin \dfrac{1}{x}, &amp; x \ne 0, \\ 0, &amp; x = 0, \end{cases}\)</span> 则 <span class="arithmatex">\(\lim_{x \to 0} f(x) = f(0) = 0\)</span>，故 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\(0\)</span> 处连续——但它不可导（差商振荡），可见"连续"弱于"可导"。</li>
+<li>例 19：<span class="arithmatex">\(\lim_{x \to 0} \dfrac{\arcsin x}{x} = 1\)</span>：换元 <span class="arithmatex">\(t = \arcsin x\)</span>，则 <span class="arithmatex">\(x = \sin t\)</span> 且 <span class="arithmatex">\(x \to 0\)</span> 时 <span class="arithmatex">\(t \to 0\)</span>，化为 <span class="arithmatex">\(\dfrac{t}{\sin t} \to 1\)</span>。</li>
+<li>例 20（ε-δ 证明）证明 <span class="arithmatex">\(\lim_{x \to 3} x^2 = 9\)</span>：先限定 <span class="arithmatex">\(|x - 3| &lt; 1\)</span> 使 <span class="arithmatex">\(|x + 3| &lt; 7\)</span>，则 <span class="arithmatex">\(|x^2 - 9| = |x - 3| \cdot |x + 3| &lt; 7|x - 3|\)</span>，取 <span class="arithmatex">\(\delta = \min\{1, \varepsilon/7\}\)</span> 即满足定义。先限定、再取 <span class="arithmatex">\(\min\)</span>，是处理因子中依赖 <span class="arithmatex">\(x\)</span> 的项的通用手法。</li>
+<li>例 21：设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([0, 1]\)</span> 上连续且 <span class="arithmatex">\(f(0) = f(1)\)</span>，则存在 <span class="arithmatex">\(\xi \in [0, 1/2]\)</span> 使 <span class="arithmatex">\(f(\xi) = f(\xi + 1/2)\)</span>。令 <span class="arithmatex">\(g(x) = f(x) - f(x + 1/2)\)</span>，则 <span class="arithmatex">\(g\)</span> 连续且 <span class="arithmatex">\(g(0) = -g(1/2)\)</span>；若 <span class="arithmatex">\(g(0) = 0\)</span> 已得证，否则 <span class="arithmatex">\(g(0)g(1/2) &lt; 0\)</span>，由零点定理即得。</li>
+<li>例 22：<span class="arithmatex">\(\lim_{x \to 0} \dfrac{\sin x - x}{x^3} = -\dfrac{1}{6}\)</span>：用 Taylor 展开 <span class="arithmatex">\(\sin x = x - \dfrac{x^3}{6} + o(x^3)\)</span>（见<a href="../derivatives/">导数</a>）比三次 L'Hôpital 法则更直接。</li>
+<li>例 23：<span class="arithmatex">\(\lim_{x \to +\infty} \left( \dfrac{x}{x+1} \right)^x = \lim_{x \to +\infty} \dfrac{1}{(1 + 1/x)^x} = \dfrac{1}{e}\)</span>（重要极限的倒数形式）。</li>
+<li>例 24：证明 <span class="arithmatex">\(f(x) = x^2\)</span> 在 <span class="arithmatex">\([0, 1]\)</span> 上一致连续：对任意 <span class="arithmatex">\(\varepsilon &gt; 0\)</span>，取 <span class="arithmatex">\(\delta = \varepsilon/2\)</span>，因 <span class="arithmatex">\(|x_1^2 - x_2^2| = |x_1 + x_2| \cdot |x_1 - x_2| \le 2|x_1 - x_2| &lt; \varepsilon\)</span>——这里的 <span class="arithmatex">\(\delta\)</span> 与点无关，正是一致连续的要点。</li>
+<li>例 25：<span class="arithmatex">\(\lim_{x \to 0} \dfrac{x - \sin x}{x^3} = \dfrac{1}{6}\)</span>：Taylor 展开 <span class="arithmatex">\(x - (x - x^3/6) = x^3/6\)</span>（见<a href="../derivatives/">导数</a>）。</li>
+<li>例 26：设 <span class="arithmatex">\(f\)</span> 连续且 <span class="arithmatex">\(\lim_{x \to 0} \dfrac{f(x)}{x} = 2\)</span>，则 <span class="arithmatex">\(f(0) = 0\)</span>（由 <span class="arithmatex">\(\lim f(x) = \lim \dfrac{f(x)}{x} \cdot x = 0\)</span> 与连续性），且 <span class="arithmatex">\(f'(0) = \lim \dfrac{f(x) - f(0)}{x} = 2\)</span>。</li>
+</ul>
+<h2 id="_16">小结<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<p>本页的核心线索是一条链：<strong>ε-δ 定义 → 极限的四则运算与夹逼 → 两个重要极限与无穷小比较 → 连续性 → 闭区间上连续函数的整体性质</strong>。极限是微积分的语法基础：导数（<a href="../derivatives/">导数</a>）正是把差商取极限，积分（<a href="../integrals/">积分</a>）正是把 Riemann 和取极限，而数列与级数（<a href="../sequences_series/">数列与级数</a>）则是极限在离散世界的另一半。</p>
+<h2 id="_17">延伸阅读<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../derivatives/">导数</a>：极限的直接应用，刻画变化率。</li>
+<li><a href="../sequences_series/">数列与级数</a>：极限的离散版本与无穷求和。</li>
+<li><a href="../../real/">实分析</a>：实数完备性与连续函数的严格理论。</li>
+<li><a href="../../../notation/">符号表</a>：<span class="arithmatex">\(\lim\)</span>、<span class="arithmatex">\(\varepsilon\)</span>、<span class="arithmatex">\(\delta\)</span> 等记号约定。</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月20日 16:25:31 UTC">2026年8月20日</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年8月20日 16:25:31 UTC">2026年8月20日</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 微积分">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                微积分
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../derivatives/" class="md-footer__link md-footer__link--next" aria-label="下一页: 导数">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                导数
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 CHMath-wiki Team &mdash; 采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 协议
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.indexes", "navigation.top", "navigation.tracking", "navigation.footer", "search.suggest", "search.highlight", "search.share", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../assets/js/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
