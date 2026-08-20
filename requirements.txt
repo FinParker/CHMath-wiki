@@ -1,6 +1,8 @@
-mkdocs
-mkdocs-gitbook
-mkdocs-material
-mkdocs-material-extensions
-mkdocs-redirects
-mkdocs-video
+# CHMath-wiki 构建依赖
+# 技术栈: mkdocs + mkdocs-material
+# 精确锁定版本以保证 CI 可复现构建
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+pymdown-extensions==11.0.1
+mkdocs-redirects==1.2.2
+mkdocs-git-revision-date-localized-plugin==1.5.3

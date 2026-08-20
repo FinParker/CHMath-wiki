@@ -1,23 +1,77 @@
-<!--
- * @Author: FinParker 2576226012@qq.com
- * @Date: 2025-03-20 20:09:52
- * @LastEditors: iming 2576226012@qq.com
- * @LastEditTime: 2025-04-28 08:17:06
- * @FilePath: \CHMath-wiki\docs\index.md
- * @Description: 
--->
-# Welcome to CHMath
+---
+title: CHMath-wiki 首页
+hide:
+  - toc
+  - navigation
+---
 
-## 欢迎来到iming的数学笔记仓库
+# CHMath-wiki
 
-由于作者正在学习离散数学内容,会优先更新这一部分
+> 一个旨在通过提供**精准、简洁且抓住问题本质**的数学内容，来提升数学理解能力的中文资料库。
 
-目前更新内容
+本 wiki 面向高中以上学力、对数学研究感兴趣的学习者，按**现代数学的学科脉络**组织内容：
+从数理逻辑、集合论与范畴论等基础出发，逐步覆盖代数、分析、几何、拓扑、数论与离散数学。
 
-- 离散数学
-  - 代数
-    - [半群和独异点](./discrete_mathematics/algebraic_structure/group.md)
-    - 群论
-    - 环
+<div class="grid cards" markdown>
 
-作者爆肝更新中,右上角给个免费的收藏支持一下吧
+-   :material-book-open-page-variant:{ .lg } **数学基础**
+
+    ---
+
+    数理逻辑 · 集合论 · 范畴论 —— 现代数学的语言与地基。
+
+    [:octicons-arrow-right-24: 进入数学基础](foundations/index.md)
+
+-   :material-function-variant:{ .lg } **代数**
+
+    ---
+
+    群、环、域等代数结构，以及向量空间与线性代数。
+
+    [:octicons-arrow-right-24: 进入代数](algebra/index.md)
+
+-   :material-chart-bell-curve:{ .lg } **分析**
+
+    ---
+
+    微积分、实分析与复分析 —— 极限思想的三大分支。
+
+    [:octicons-arrow-right-24: 进入分析](analysis/index.md)
+
+-   :material-shape-outline:{ .lg } **几何与拓扑**
+
+    ---
+
+    从初等几何到拓扑空间、连通性与紧致性。
+
+    [:octicons-arrow-right-24: 进入几何](geometry/index.md) · [:octicons-arrow-right-24: 进入拓扑](topology/index.md)
+
+-   :material-calculator:{ .lg } **数论与离散数学**
+
+    ---
+
+    素数、模运算、组合、图论与自动机理论。
+
+    [:octicons-arrow-right-24: 进入数论](number_theory/index.md) · [:octicons-arrow-right-24: 进入离散数学](discrete_mathematics/index.md)
+
+-   :material-dice-5:{ .lg } **概率统计 · 技巧 · 初等数学**
+
+    ---
+
+    概率论基础、解题技巧，以及中学阶段内容(草稿区)。
+
+    [:octicons-arrow-right-24: 概率与统计](probability_statistics/index.md) · [:octicons-arrow-right-24: 技巧](tricks/index.md)
+
+</div>
+
+## 快速开始
+
+- 不确定符号含义？先查[符号表](notation/index.md)。
+- 想了解本站的组织方式与写作规范？请看[关于本项目](intro/about.md)与[写作规范](intro/writing-guide.md)。
+- 想参与贡献？请阅读[贡献指南](intro/contribute.md)。
+
+## 最近更新
+
+- 内容重构进行中：全新的学科化信息架构、MathJax 3 数学渲染、标签与全文搜索已上线。
+- 各学科内容正在逐步扩充，详见[内容路线图](intro/roadmap.md)与
+  [CHANGELOG](https://github.com/FinParker/CHMath-wiki/blob/main/CHANGELOG.md)。

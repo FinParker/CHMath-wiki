@@ -106,6 +106,26 @@ $$
 \end{array}
 $$
 
+$$
+\begin{array}{|c|c|c|c|}
+\hline
+\text{类别} & \text{符号} & \text{LaTeX表示} & \text{描述} \\
+\hline
+\text{常用集合} & \mathbb{Z} & \verb+\mathbb{Z}+ & \text{整数集} \\
+\hline
+\text{} & \mathbb{Q} & \verb+\mathbb{Q}+ & \text{有理数集} \\
+\hline
+\text{} & M_n(\mathbb{R}) & \verb+M_n(\mathbb{R})+ & \text{实数上 } n \times n \text{ 矩阵全体} \\
+\hline
+\text{幂集} & \mathcal{P}(A) \text{ 或 } 2^A & \verb+\mathcal{P}(A)+ & \text{集合 } A \text{ 的所有子集的集合} \\
+\hline
+\text{函数集} & A^A & \verb+A^A+ & \text{从 } A \text{ 到 } A \text{ 的全体函数} \\
+\hline
+\text{关系集} & R(B) & \verb+R(B)+ & \text{集合 } B \text{ 上全体二元关系} \\
+\hline
+\end{array}
+$$
+
 ## 运算符号
 
 $$

@@ -1,68 +1,38 @@
-<!--
- * @Author: chinesehamburger 2576226012@qq.com
- * @Date: 2025-03-20 23:53:31
- * @LastEditors: chinesehamburger 2576226012@qq.com
- * @LastEditTime: 2025-03-21 00:04:37
- * @FilePath: \CHMath-wiki\docs\intro\about.md
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
 # 关于本项目
 
-该项目致力于对数学研究感兴趣的人
-该项目面向高中以上学力的人群
-如果你喜欢数学,可以参考子项目
+**CHMath-wiki** 是一个面向"高中以上学力、对数学研究感兴趣的人"的中文数学资料库。
+它的目标是提供**精准、简洁、抓住问题本质**的内容——不堆砌公式，而是讲清楚每个概念
+"是什么、为什么、怎么用"。
+
+## 内容定位
+
+- 面向 **高中及以上** 学力的人群，最终目标是覆盖本科高年级的现代数学基石。
+- 每条内容强调**本质**：定义背后的动机、定理之间的逻辑关系、证明的关键思路。
+- 内容按**现代数学的学科脉络**组织，而非按教材章节组织，便于长期生长为大型 wiki。
+
+## 项目历史
+
+本项目最初是作者的数学笔记集合（mkdocs 搭建），内容以离散数学笔记为主。
+2025 年 6 月进行了大规模重构：重新设计信息架构、升级数学渲染引擎、引入标签系统与
+旧链接重定向，并开始系统性扩充集合论、范畴论、线性代数、分析等学科内容。
+完整的变更记录见 [CHANGELOG](https://github.com/FinParker/CHMath-wiki/blob/main/CHANGELOG.md)。
+
+## 技术栈
+
+| 组件   | 选择                                                    |
+| ------ | ------------------------------------------------------- |
+| 文档站 | [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) |
+| 数学   | MathJax 3（配合 pymdownx.arithmatex，支持 `$...$` / `$$...$$`） |
+| 搜索   | mkdocs-material 内置搜索（中文分词 + 拼音）              |
+| 部署   | GitHub Actions → GitHub Pages                           |
+
+详见[项目开发文档](../development/index.md)。
+
+## 姊妹项目（规划中）
+
 - 初中数学自学指南
 - 高中数学自学指南
 
-# 项目建设计划
+## 版权
 
-- 初中数学自学指南
-  算术与数论基础
-
-    自然数、整数、分数、小数运算
-
-    因数、倍数、质数、最大公约数/最小公倍数
-
-    方程初步（一元一次方程）
-
-    目标：建立数感与运算逻辑
-	几何初步
-
-    平面图形性质（三角形、圆、多边形）
-
-    周长、面积、体积计算
-
-    对称性、平移与旋转
-
-    目标：培养空间直观
-
-统计与概率基础
-
-    数据收集与图表表示（条形图、折线图）
-
-    平均数、中位数、众数
-
-    简单概率（骰子、硬币实验）
-
-- 数学核心工具构建(高中-本科低年级)
-  - 代数与函数
-  - 几何
-  - 概率统计
-  - 微积分初步
-
-- 现代数学基石(本科高年级)
-  - 数学分析
-    - 实分析
-    - 复分析
-    - 泛函分析
-  - 抽象代数
-    - 群论
-    - 环与域
-  - 几何拓扑
-
-- 离散数学 discrete_mathematics
-  - 集合论 set_theory
-  - 图论 graph_theory
-  - 代数结构 algebraic_structures
-  - 组合数学 combinatorics
-  - 自动机理论 automata_theory
+本站内容采用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 协议发布。
