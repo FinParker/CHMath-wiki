@@ -47,6 +47,8 @@
       
     
     
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -326,7 +328,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        快速开始
+        按领域学习
       
     </span>
   </a>
@@ -335,6 +337,17 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速开始
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         最近更新
@@ -5389,7 +5402,7 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        快速开始
+        按领域学习
       
     </span>
   </a>
@@ -5398,6 +5411,17 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速开始
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
         最近更新
@@ -5429,11 +5453,18 @@
   
 
 
+<div class="home-shell">
+<section class="home-hero">
+<p><span class="home-eyebrow">Chinese Mathematics Knowledge Base</span></p>
 <h1 id="chmath-wiki">CHMath-wiki<a class="headerlink" href="#chmath-wiki" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>一个旨在通过提供<strong>精准、简洁且抓住问题本质</strong>的数学内容，来提升数学理解能力的中文资料库。</p>
-</blockquote>
-<p>本 wiki 面向初中以上学力、对数学感兴趣的学习者。可以从初中与高中数学开始系统学习，也可以按<strong>现代数学的学科脉络</strong>，从数理逻辑、集合论与范畴论等基础出发，逐步进入代数、分析、几何、拓扑、数论与离散数学。</p>
+<p class="home-lead">一个追求精准、简洁与本质理解的中文数学知识库。从中学基础出发，沿现代数学的结构进入代数、分析、几何、概率、应用与研究前沿。</p>
+<div class="home-actions">
+<p><a class="md-button md-button--primary" href="intro/mathematics-map/">开始学习</a>
+<a class="md-button" href="intro/curriculum-gap-analysis/">查看课程覆盖</a></p>
+</div>
+</section>
+<p class="home-section-kicker">Explore mathematics</p>
+<h2 id="_1">按领域学习<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <div class="grid cards">
 <ul>
 <li>
@@ -5504,7 +5535,8 @@
 </li>
 </ul>
 </div>
-<h2 id="_1">快速开始<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p class="home-section-kicker">Start here</p>
+<h2 id="_2">快速开始<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul>
 <li>不确定符号含义？先查<a href="notation/">符号表</a>。</li>
 <li>不知道从哪里开始？先看<a href="intro/mathematics-map/">数学领域地图</a>和其中的学习路径。</li>
@@ -5512,12 +5544,13 @@
 <li>想了解本站的组织方式与写作规范？请看<a href="intro/about/">关于本项目</a>与<a href="intro/writing-guide/">写作规范</a>。</li>
 <li>想参与贡献？请阅读<a href="intro/contribute/">贡献指南</a>。</li>
 </ul>
-<h2 id="_2">最近更新<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">最近更新<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>内容重构进行中：全新的学科化信息架构、MathJax 3 数学渲染、标签与全文搜索已上线。</li>
 <li>各学科内容正在逐步扩充，详见<a href="intro/roadmap/">内容路线图</a>与
   <a href="https://github.com/FinParker/CHMath-wiki/blob/main/CHANGELOG.md">CHANGELOG</a>。</li>
 </ul>
+</div>
 
 
 
@@ -5540,7 +5573,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年10月5日 18:42:02 UTC">2026年10月5日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年10月5日 21:18:02 UTC">2026年10月5日</span>
   </span>
 
     
