@@ -17,12 +17,15 @@ tags:
 - [自然变换](natural_transformations.md) — 函子之间的映射、自然同构。
 - [泛性质与极限](universal_properties.md) — 始对象、终对象、积、余积、极限与余极限。
 - [Yoneda 引理](yoneda.md) — "对象由它的 Hom 函子决定"。
+- [范畴逻辑与类型论](categorical_logic.md) — CCC、LCCC、CwF 与 Curry–Howard–Lambek 对应。
 
 ## 前置知识
 
 - [集合论](../set_theory/index.md)：范畴论中大量使用集合与函数的概念。
 - [群论](../../algebra/structures/group.md)：$\mathbf{Grp}$、$\mathbf{Ab}$ 等经典范畴来自代数结构。
+- [类型论](../type_theory/index.md)：范畴论内部语言与依赖类型的句法来源。
 
 ## 延伸阅读
 
 - [符号表](../../notation/index.md)：$\operatorname{Hom}$、$\circ$ 等记号。
+- [证明论](../logic/proof_theory.md)：证明归一化与 cut elimination。

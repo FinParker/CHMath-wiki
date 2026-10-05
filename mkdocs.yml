@@ -119,6 +119,7 @@ nav:
       - foundations/logic/index.md
       - 命题逻辑: foundations/logic/propositional_logic.md
       - 谓词逻辑: foundations/logic/predicate_logic.md
+      - 证明论: foundations/logic/proof_theory.md
     - 集合论:
       - foundations/set_theory/index.md
       - 基本概念: foundations/set_theory/basics.md
@@ -137,6 +138,12 @@ nav:
       - 自然变换: foundations/category_theory/natural_transformations.md
       - 泛性质与极限: foundations/category_theory/universal_properties.md
       - Yoneda 引理: foundations/category_theory/yoneda.md
+      - 范畴逻辑与类型论: foundations/category_theory/categorical_logic.md
+    - 类型论:
+      - foundations/type_theory/index.md
+      - Lambda Cube: foundations/type_theory/lambda_cube.md
+      - 同伦类型论 HoTT: foundations/type_theory/homotopy_type_theory.md
+      - 立方类型论 CuTT: foundations/type_theory/cubical_type_theory.md
   - 代数:
     - algebra/index.md
     - 代数结构:
