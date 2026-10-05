@@ -7,6 +7,7 @@
 
 ### Added
 
+- 新增圆锥曲线专题：统一介绍椭圆、抛物线、双曲线的定义、标准方程、焦点与准线、切线、反射性质及一般二次曲线分类，并为重要术语和定理标注英文名称。
 - 新增 LICENSE（CC BY-SA 4.0）并重写 README。
 - CI 升级：Python 3.12 + 依赖缓存 + 部署前严格构建校验（`.github/workflows/deploy-docs.yml`）。
 - 大规模内容扩充（全部经 web_search 核实事实后撰写）：

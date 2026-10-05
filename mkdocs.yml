@@ -173,7 +173,10 @@ nav:
       - analysis/complex/index.md
       - 复数: analysis/complex/complex_numbers.md
       - 全纯函数: analysis/complex/holomorphic_functions.md
-  - 几何: geometry/index.md
+  - 几何:
+    - geometry/index.md
+    - 初等几何: geometry/elementary.md
+    - 圆锥曲线: geometry/conic_sections.md
   - 拓扑学:
     - topology/index.md
     - 拓扑空间: topology/topological_spaces.md

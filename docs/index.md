@@ -42,7 +42,7 @@ hide:
 
     ---
 
-    从初等几何到拓扑空间、连通性与紧致性。
+    从初等几何与圆锥曲线，到拓扑空间、连通性与紧致性。
 
     [:octicons-arrow-right-24: 进入几何](geometry/index.md) · [:octicons-arrow-right-24: 进入拓扑](topology/index.md)
 
