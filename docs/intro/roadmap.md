@@ -61,7 +61,18 @@
 | 应用数学 | 微分方程、数值分析、凸优化 | 🔄 |
 | 数学史 | 发展简史、数学危机、Hilbert 问题、著名难题 | 🔄 |
 
+## 前沿数学
+
+| 方向 | 内容 | 状态 |
+| --- | --- | --- |
+| 算术与几何 | Langlands、perfectoid、prismatic cohomology | 🔄 |
+| 高阶结构 | $\infty$-范畴、derived geometry、condensed mathematics | 🔄 |
+| 分析与随机 | 几何分析、湍流、SPDE、KPZ、optimal transport | 🔄 |
+| 数据与计算 | 高维统计、随机矩阵、TDA、学习理论 | 🔄 |
+| 数学物理 | QFT、mirror symmetry、拓扑相、量子信息 | 🔄 |
+| 形式化数学 | proof assistants、mathlib、AI theorem proving | 🔄 |
+
 ## 后续计划
 
-1. 代数几何、解析数论、偏微分方程、表示论与数学物理。
+1. 继续深化代数几何、解析数论、偏微分方程、表示论和数学物理的严格基础。
 2. 每个章节补充习题、证明细节与交叉链接，形成真正的知识网络。

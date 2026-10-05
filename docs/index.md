@@ -85,6 +85,14 @@ hide:
 
     [:octicons-arrow-right-24: 进入数学史](history/index.md)
 
+-   :material-flask-outline:{ .lg } **前沿数学**
+
+    ---
+
+    Langlands、perfectoid、derived/condensed mathematics、SPDE、TDA、数学物理与形式化证明。
+
+    [:octicons-arrow-right-24: 进入前沿数学](frontiers/index.md)
+
 </div>
 
 ## 快速开始

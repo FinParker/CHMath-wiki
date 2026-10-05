@@ -243,6 +243,14 @@ nav:
     - 数学危机: history/crises.md
     - Hilbert 的 23 个问题: history/hilbert_problems.md
     - 著名数学难题及状态: history/famous_problems.md
+  - 前沿数学:
+    - frontiers/index.md
+    - 算术几何与 Langlands: frontiers/arithmetic_geometry.md
+    - 高阶、导出与凝聚数学: frontiers/higher_derived_condensed.md
+    - 分析、概率与方程前沿: frontiers/analysis_probability.md
+    - 数据的数学: frontiers/data_mathematics.md
+    - 数学物理与量子结构: frontiers/mathematical_physics.md
+    - 形式化数学与 AI: frontiers/formal_ai.md
   - 项目开发: development/index.md
 
 # -------------------------------------------------------------
