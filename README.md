@@ -4,6 +4,8 @@
 
 面向高中以上学力、对数学研究感兴趣的学习者，按现代数学的学科脉络组织内容。
 
+在线阅读：[CHMath-wiki GitHub Pages](https://finparker.github.io/CHMath-wiki/)
+
 ## 内容结构
 
 | 章节         | 内容                                            |
