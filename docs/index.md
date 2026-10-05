@@ -49,7 +49,7 @@ hide:
 
     ---
 
-    从初等几何与圆锥曲线，到拓扑空间、连通性与紧致性。
+    从初等几何、圆锥曲线与分形，到拓扑空间、连通性与紧致性。
 
     [:octicons-arrow-right-24: 进入几何](geometry/index.md) · [:octicons-arrow-right-24: 进入拓扑](topology/index.md)
 
@@ -73,7 +73,7 @@ hide:
 
     ---
 
-    微分方程、数值分析与凸优化 —— 从数学模型到可计算方案。
+    微分方程、数学物理方法、数值分析与凸优化 —— 从数学模型到可计算方案。
 
     [:octicons-arrow-right-24: 进入应用数学](applied_math/index.md)
 
@@ -89,7 +89,7 @@ hide:
 
     ---
 
-    Langlands、perfectoid、derived/condensed mathematics、SPDE、TDA、数学物理与形式化证明。
+    Langlands、derived/condensed mathematics、SPDE、TDA、AI 中的数学、数学物理与形式化证明。
 
     [:octicons-arrow-right-24: 进入前沿数学](frontiers/index.md)
 

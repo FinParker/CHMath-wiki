@@ -190,6 +190,7 @@ nav:
     - 初等几何: geometry/elementary.md
     - 圆锥曲线: geometry/conic_sections.md
     - 微分几何: geometry/differential_geometry.md
+    - 分形: geometry/fractals.md
   - 拓扑学:
     - topology/index.md
     - 拓扑空间: topology/topological_spaces.md
@@ -217,6 +218,7 @@ nav:
   - 应用数学:
     - applied_math/index.md
     - 微分方程: applied_math/differential_equations.md
+    - 数学物理方法: applied_math/mathematical_physics_methods.md
     - 数值分析: applied_math/numerical_analysis.md
     - 最优化: applied_math/optimization.md
   - 解题技巧:
@@ -250,6 +252,7 @@ nav:
     - 分析、概率与方程前沿: frontiers/analysis_probability.md
     - 数据的数学: frontiers/data_mathematics.md
     - 数学物理与量子结构: frontiers/mathematical_physics.md
+    - AI 中的数学: frontiers/mathematics_of_ai.md
     - 形式化数学与 AI: frontiers/formal_ai.md
   - 项目开发: development/index.md
 

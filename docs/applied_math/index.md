@@ -12,6 +12,7 @@ tags:
 ## 内容地图
 
 - [微分方程](differential_equations.md) — ODE、动力系统与 PDE 原型。
+- [数学物理方法](mathematical_physics_methods.md) — Fourier 变换、Green 函数、变分法、谱方法与渐近分析。
 - [数值分析](numerical_analysis.md) — 误差、稳定性、求根、插值与数值微分方程。
 - [最优化](optimization.md) — 凸性、KKT 条件、对偶与算法。
 
