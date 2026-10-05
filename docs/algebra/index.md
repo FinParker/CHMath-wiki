@@ -31,6 +31,10 @@ tags:
 
 </div>
 
+## 进阶专题
+
+- [Galois 理论](structures/galois_theory.md)：用群描述多项式根与域扩张的对称性。
+
 ## 延伸阅读
 
 - [集合论](../foundations/set_theory/index.md)：代数结构定义在集合之上。

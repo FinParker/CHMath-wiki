@@ -98,9 +98,89 @@ $2024$ 的末位是 $4$，符合末位条件，但 $44^2 = 1936 < 2024 < 45^2 = 
 !!! warning
     末位数字符合条件只是完全平方数的**必要**条件，不是充分条件。例如 $14$ 的末位是 $4$，但 $14$ 不是完全平方数，必须进一步检验。
 
+## 带余除法与欧几里得算法
+
+**定理 1（带余除法，division algorithm）** 对任意整数 $a$ 和正整数 $b$，存在唯一整数 $q,r$，使
+
+$$a=bq+r,\qquad 0\le r<b.$$
+
+若 $a=bq+r$，则 $\gcd(a,b)=\gcd(b,r)$。反复取余便得到**欧几里得算法**（Euclidean algorithm）。例如
+
+$$252=105\cdot2+42,\quad105=42\cdot2+21,\quad42=21\cdot2,$$
+
+所以 $\gcd(252,105)=21$。
+
+**定理 2（Bézout 恒等式，Bézout's identity）** 对不全为零的整数 $a,b$，存在整数 $x,y$ 使
+
+$$ax+by=\gcd(a,b).$$
+
+扩展欧几里得算法（extended Euclidean algorithm）可以求出一组 $x,y$。特别地，$a,b$ 互质当且仅当存在 $x,y$ 使 $ax+by=1$。
+
+## 同余与模运算
+
+若 $m\mid(a-b)$，称 $a$ 与 $b$ **模 $m$ 同余**（congruent modulo $m$），记作
+
+$$a\equiv b\pmod m.$$
+
+同余可以相加、相减、相乘和取正整数次幂。约去公因子时则必须检查它和模数是否互质；由 $ac\equiv bc\pmod m$ 一般只能推出
+
+$$a\equiv b\pmod{m/\gcd(c,m)}.$$
+
+常见整除判定本质上是同余。例如 $10\equiv1\pmod9$，所以一个十进制整数模 $9$ 的余数等于其各位数字之和模 $9$ 的余数。
+
+## 线性同余与模逆元
+
+若 $ax\equiv1\pmod m$，则 $x$ 称为 $a$ 模 $m$ 的**乘法逆元**（multiplicative inverse）。逆元存在当且仅当 $\gcd(a,m)=1$。
+
+线性同余
+
+$$ax\equiv b\pmod m$$
+
+有解当且仅当 $\gcd(a,m)\mid b$。例如 $7\cdot7=49\equiv1\pmod{12}$，所以 $7x\equiv5\pmod{12}$ 的解是 $x\equiv11\pmod{12}$。
+
+## 线性不定方程
+
+二元一次不定方程（linear Diophantine equation）
+
+$$ax+by=c$$
+
+有整数解当且仅当 $d=\gcd(a,b)$ 整除 $c$。若 $(x_0,y_0)$ 是一个特解，则全部整数解为
+
+$$x=x_0+\frac bd t,\qquad y=y_0-\frac ad t,\qquad t\in\mathbb Z.$$
+
+## 中国剩余定理
+
+**定理 3（中国剩余定理，Chinese remainder theorem）** 若 $m_1,\ldots,m_k$ 两两互质，则同余方程组
+
+$$x\equiv a_i\pmod{m_i}\qquad(i=1,\ldots,k)$$
+
+模 $M=m_1\cdots m_k$ 有唯一解。例如 $x\equiv2\pmod3$、$x\equiv3\pmod5$ 的解为 $x\equiv8\pmod{15}$。
+
+## Fermat 小定理与 Euler 定理
+
+**定理 4（Fermat 小定理，Fermat's little theorem）** 若 $p$ 是质数且 $p\nmid a$，则
+
+$$a^{p-1}\equiv1\pmod p.$$
+
+**定理 5（Euler 定理，Euler's theorem）** 若 $\gcd(a,n)=1$，则
+
+$$a^{\varphi(n)}\equiv1\pmod n,$$
+
+其中 $\varphi(n)$ 是 Euler 函数（Euler's totient function）。Fermat 小定理是 $n=p$ 的特例，这些结论也构成 RSA 密码体制的数论基础。
+
+## 常见误区与练习方向
+
+- 同余式不能无条件约分；先检查被约因子与模数的最大公约数。
+- $ab$ 是平方数不推出 $a,b$ 都是平方数；若再假设 $\gcd(a,b)=1$ 才成立。
+- Fermat 小定理的逆命题不成立，合数也可能通过某些底数的检验。
+- 尝试用扩展欧几里得算法求 $37$ 模 $101$ 的逆元。
+- 尝试用中国剩余定理解 $x\equiv1\pmod4$、$x\equiv2\pmod5$、$x\equiv3\pmod7$。
+
 ## 延伸阅读
 
 - [等式与方程](equations.md)：整除、质因数分解与解方程常结合考查。
 - [集合](sets.md)：整除关系的集合语言表述。
 - [初等数论](../number_theory/index.md)：更系统地研究同余、不定方程等主题。
 - [符号约定](../notation/index.md)：整除、约分等数学符号的规范用法。
+- [MIT OpenCourseWare: Theory of Numbers](https://ocw.mit.edu/courses/18-781-theory-of-numbers-spring-2012/)：本科数论课程资料。
+- [Topology of Numbers](https://pi.math.cornell.edu/~hatcher/TN/TNbook.pdf)：Allen Hatcher 从拓扑视角讲解初等数论的开放教材。

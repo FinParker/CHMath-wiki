@@ -13,10 +13,10 @@ tags:
 
 - [初等几何](elementary.md) — 平面几何：三角形、圆、全等与相似（草稿）。
 - [圆锥曲线](conic_sections.md) — 椭圆、抛物线与双曲线的焦点性质、标准方程和统一分类。
+- [微分几何](differential_geometry.md) — 流形、Riemann 度量、测地线与曲率。
 
 ## 规划中
 
-- 微分几何
 - 代数几何
 
 ## 延伸阅读

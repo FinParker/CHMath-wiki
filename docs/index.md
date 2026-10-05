@@ -69,11 +69,28 @@ hide:
 
     [:octicons-arrow-right-24: 概率与统计](probability_statistics/index.md) · [:octicons-arrow-right-24: 技巧](tricks/index.md)
 
+-   :material-cog-outline:{ .lg } **应用数学**
+
+    ---
+
+    微分方程、数值分析与凸优化 —— 从数学模型到可计算方案。
+
+    [:octicons-arrow-right-24: 进入应用数学](applied_math/index.md)
+
+-   :material-timeline-clock-outline:{ .lg } **数学史与数学问题**
+
+    ---
+
+    数学发展、基础危机、Hilbert 问题与著名未解难题。
+
+    [:octicons-arrow-right-24: 进入数学史](history/index.md)
+
 </div>
 
 ## 快速开始
 
 - 不确定符号含义？先查[符号表](notation/index.md)。
+- 不知道从哪里开始？先看[数学领域地图](intro/mathematics-map.md)和其中的学习路径。
 - 想了解本站的组织方式与写作规范？请看[关于本项目](intro/about.md)与[写作规范](intro/writing-guide.md)。
 - 想参与贡献？请阅读[贡献指南](intro/contribute.md)。
 

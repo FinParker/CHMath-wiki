@@ -109,6 +109,7 @@ nav:
   - 入门:
     - intro/index.md
     - 关于本项目: intro/about.md
+    - 数学领域地图: intro/mathematics-map.md
     - 内容路线图: intro/roadmap.md
     - 贡献指南: intro/contribute.md
     - 写作规范: intro/writing-guide.md
@@ -154,6 +155,7 @@ nav:
       - 环: algebra/structures/ring.md
       - 域: algebra/structures/field.md
       - 多项式: algebra/structures/polynomial.md
+      - Galois 理论: algebra/structures/galois_theory.md
     - 线性代数:
       - algebra/linear/index.md
       - 向量空间: algebra/linear/vector_spaces.md
@@ -180,15 +182,20 @@ nav:
       - analysis/complex/index.md
       - 复数: analysis/complex/complex_numbers.md
       - 全纯函数: analysis/complex/holomorphic_functions.md
+    - 多元微积分: analysis/multivariable.md
+    - 测度论与 Lebesgue 积分: analysis/measure_theory.md
+    - 泛函分析: analysis/functional_analysis.md
   - 几何:
     - geometry/index.md
     - 初等几何: geometry/elementary.md
     - 圆锥曲线: geometry/conic_sections.md
+    - 微分几何: geometry/differential_geometry.md
   - 拓扑学:
     - topology/index.md
     - 拓扑空间: topology/topological_spaces.md
     - 连通性: topology/connectedness.md
     - 紧致性: topology/compactness.md
+    - 代数拓扑: topology/algebraic_topology.md
   - 数论:
     - number_theory/index.md
     - 初等数论基础: number_theory/basic.md
@@ -203,7 +210,15 @@ nav:
     - probability_statistics/index.md
     - 概率论基础: probability_statistics/basics.md
     - 随机变量: probability_statistics/random_variables.md
-  - 应用数学: applied_math/index.md
+    - 多维随机变量与条件期望: probability_statistics/joint_distributions.md
+    - 概率极限定理: probability_statistics/limit_theorems.md
+    - 数理统计: probability_statistics/mathematical_statistics.md
+    - 随机过程: probability_statistics/stochastic_processes.md
+  - 应用数学:
+    - applied_math/index.md
+    - 微分方程: applied_math/differential_equations.md
+    - 数值分析: applied_math/numerical_analysis.md
+    - 最优化: applied_math/optimization.md
   - 解题技巧:
     - tricks/index.md
     - 阶乘: tricks/factorial.md
@@ -222,6 +237,12 @@ nav:
       - 简单逻辑: elementary/logic.md
       - 三角函数: elementary/trigonometry.md
       - 数列: elementary/sequences.md
+  - 数学史与数学问题:
+    - history/index.md
+    - 数学发展简史: history/timeline.md
+    - 数学危机: history/crises.md
+    - Hilbert 的 23 个问题: history/hilbert_problems.md
+    - 著名数学难题及状态: history/famous_problems.md
   - 项目开发: development/index.md
 
 # -------------------------------------------------------------
