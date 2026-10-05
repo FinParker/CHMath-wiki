@@ -35,7 +35,7 @@ docs/
   probability_statistics/   # 概率与统计
   applied_math/             # 应用数学（占位）
   tricks/                   # 解题技巧
-  elementary/               # 初等数学（草稿）
+  elementary/               # 初等数学：初中、高中与专题内容
   development/              # 项目开发文档
 ```
 

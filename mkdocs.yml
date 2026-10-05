@@ -208,14 +208,20 @@ nav:
     - tricks/index.md
     - 阶乘: tricks/factorial.md
     - 有理分式的拆分: tricks/partial_fractions.md
-  - 初等数学(草稿):
+  - 初等数学:
     - elementary/index.md
-    - 集合: elementary/sets.md
-    - 函数: elementary/functions.md
-    - 不等式: elementary/inequalities.md
-    - 数论: elementary/number_theory.md
-    - 等式与方程: elementary/equations.md
-    - 简单逻辑: elementary/logic.md
+    - 初中数学:
+      - 初中数学总览: elementary/junior_high.md
+      - 等式与方程: elementary/equations.md
+      - 初等数论: elementary/number_theory.md
+    - 高中数学:
+      - 高中数学总览: elementary/senior_high.md
+      - 集合: elementary/sets.md
+      - 函数: elementary/functions.md
+      - 不等式: elementary/inequalities.md
+      - 简单逻辑: elementary/logic.md
+      - 三角函数: elementary/trigonometry.md
+      - 数列: elementary/sequences.md
   - 项目开发: development/index.md
 
 # -------------------------------------------------------------

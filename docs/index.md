@@ -9,10 +9,17 @@ hide:
 
 > 一个旨在通过提供**精准、简洁且抓住问题本质**的数学内容，来提升数学理解能力的中文资料库。
 
-本 wiki 面向高中以上学力、对数学研究感兴趣的学习者，按**现代数学的学科脉络**组织内容：
-从数理逻辑、集合论与范畴论等基础出发，逐步覆盖代数、分析、几何、拓扑、数论与离散数学。
+本 wiki 面向初中以上学力、对数学感兴趣的学习者。可以从初中与高中数学开始系统学习，也可以按**现代数学的学科脉络**，从数理逻辑、集合论与范畴论等基础出发，逐步进入代数、分析、几何、拓扑、数论与离散数学。
 
 <div class="grid cards" markdown>
+
+-   :material-school-outline:{ .lg } **初等数学**
+
+    ---
+
+    初中数学 · 高中数学 —— 从数与代数、几何证明，到函数、三角、数列与概率。
+
+    [:octicons-arrow-right-24: 进入初等数学](elementary/index.md)
 
 -   :material-book-open-page-variant:{ .lg } **数学基础**
 
@@ -54,11 +61,11 @@ hide:
 
     [:octicons-arrow-right-24: 进入数论](number_theory/index.md) · [:octicons-arrow-right-24: 进入离散数学](discrete_mathematics/index.md)
 
--   :material-dice-5:{ .lg } **概率统计 · 技巧 · 初等数学**
+-   :material-dice-5:{ .lg } **概率统计与解题技巧**
 
     ---
 
-    概率论基础、解题技巧，以及中学阶段内容(草稿区)。
+    概率论基础、随机变量，以及常用的解题方法与计算技巧。
 
     [:octicons-arrow-right-24: 概率与统计](probability_statistics/index.md) · [:octicons-arrow-right-24: 技巧](tricks/index.md)
 
