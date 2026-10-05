@@ -5,11 +5,26 @@ hide:
   - navigation
 ---
 
+<div class="home-shell" markdown>
+
+<section class="home-hero" markdown>
+
+<span class="home-eyebrow">Chinese Mathematics Knowledge Base</span>
+
 # CHMath-wiki
 
-> 一个旨在通过提供**精准、简洁且抓住问题本质**的数学内容，来提升数学理解能力的中文资料库。
+<p class="home-lead">一个追求精准、简洁与本质理解的中文数学知识库。从中学基础出发，沿现代数学的结构进入代数、分析、几何、概率、应用与研究前沿。</p>
 
-本 wiki 面向初中以上学力、对数学感兴趣的学习者。可以从初中与高中数学开始系统学习，也可以按**现代数学的学科脉络**，从数理逻辑、集合论与范畴论等基础出发，逐步进入代数、分析、几何、拓扑、数论与离散数学。
+<div class="home-actions" markdown>
+[开始学习](intro/mathematics-map.md){ .md-button .md-button--primary }
+[查看课程覆盖](intro/curriculum-gap-analysis.md){ .md-button }
+</div>
+
+</section>
+
+<p class="home-section-kicker">Explore mathematics</p>
+
+## 按领域学习
 
 <div class="grid cards" markdown>
 
@@ -103,6 +118,8 @@ hide:
 
 </div>
 
+<p class="home-section-kicker">Start here</p>
+
 ## 快速开始
 
 - 不确定符号含义？先查[符号表](notation/index.md)。
@@ -116,3 +133,5 @@ hide:
 - 内容重构进行中：全新的学科化信息架构、MathJax 3 数学渲染、标签与全文搜索已上线。
 - 各学科内容正在逐步扩充，详见[内容路线图](intro/roadmap.md)与
   [CHANGELOG](https://github.com/FinParker/CHMath-wiki/blob/main/CHANGELOG.md)。
+
+</div>
