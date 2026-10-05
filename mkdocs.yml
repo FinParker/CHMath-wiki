@@ -222,6 +222,13 @@ nav:
     - 数学物理方法: applied_math/mathematical_physics_methods.md
     - 数值分析: applied_math/numerical_analysis.md
     - 最优化: applied_math/optimization.md
+  - 数学与交叉学科:
+    - interdisciplinary/index.md
+    - 物理、化学与材料: interdisciplinary/physical_sciences.md
+    - 计算机、信息与密码: interdisciplinary/computing_information.md
+    - 生命科学与医学: interdisciplinary/life_health.md
+    - 经济、金融与社会系统: interdisciplinary/economics_society.md
+    - 工程、控制与地球环境: interdisciplinary/engineering_environment.md
   - 解题技巧:
     - tricks/index.md
     - 阶乘: tricks/factorial.md

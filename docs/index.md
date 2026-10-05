@@ -77,6 +77,14 @@ hide:
 
     [:octicons-arrow-right-24: 进入应用数学](applied_math/index.md)
 
+-   :material-transit-connection-variant:{ .lg } **数学与交叉学科**
+
+    ---
+
+    物理、计算机、生命医学、经济社会、工程与气候中的共同数学结构。
+
+    [:octicons-arrow-right-24: 进入交叉学科](interdisciplinary/index.md)
+
 -   :material-timeline-clock-outline:{ .lg } **数学史与数学问题**
 
     ---
