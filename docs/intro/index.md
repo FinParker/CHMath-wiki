@@ -11,7 +11,9 @@ tags:
 ## 内容地图
 
 - [关于本项目](about.md) — 项目定位、历史与技术栈。
+- [数学领域地图](mathematics-map.md) — 数学分支、相互联系与学习路径。
 - [内容路线图](roadmap.md) — 各学科内容的现状与规划。
+- [本科与研究生数学内容对照](curriculum-gap-analysis.md) — 对照培养方案检查覆盖缺口与建设优先级。
 - [贡献指南](contribute.md) — 如何参与贡献、本地构建流程。
 - [写作规范](writing-guide.md) — 页面结构、数学公式与排版约定。
 

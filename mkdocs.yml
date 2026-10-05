@@ -111,6 +111,7 @@ nav:
     - 关于本项目: intro/about.md
     - 数学领域地图: intro/mathematics-map.md
     - 内容路线图: intro/roadmap.md
+    - 本科与研究生内容对照: intro/curriculum-gap-analysis.md
     - 贡献指南: intro/contribute.md
     - 写作规范: intro/writing-guide.md
   - 符号表: notation/index.md

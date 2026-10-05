@@ -8,6 +8,8 @@
 
 学习导航：[数学领域地图](docs/intro/mathematics-map.md)
 
+课程覆盖审计：[本科与研究生数学内容对照](docs/intro/curriculum-gap-analysis.md)
+
 ## 内容结构
 
 | 章节         | 内容                                            |

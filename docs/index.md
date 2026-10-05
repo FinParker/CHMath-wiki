@@ -99,6 +99,7 @@ hide:
 
 - 不确定符号含义？先查[符号表](notation/index.md)。
 - 不知道从哪里开始？先看[数学领域地图](intro/mathematics-map.md)和其中的学习路径。
+- 想了解本站与本科、研究生课程体系之间的差距？查看[内容覆盖对照](intro/curriculum-gap-analysis.md)。
 - 想了解本站的组织方式与写作规范？请看[关于本项目](intro/about.md)与[写作规范](intro/writing-guide.md)。
 - 想参与贡献？请阅读[贡献指南](intro/contribute.md)。
 
